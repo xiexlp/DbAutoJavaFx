@@ -1,0 +1,60 @@
+\#include("/${tableWrapper.relativePath}/common/${tableWrapper.relativePath}_layout.html") #@${tableWrapper.relativePath}_layout()
+\#define content()
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        ${tableWrapper.instancename}add 新增
+    </div>
+    <div class="panel-body">
+<!-- addform 用于增加 -->
+<form action="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}PartAdd" method="post" id="add${tableWrapper.beanname}PartForm" name="add${tableWrapper.beanname}PartForm">
+    <div class="form-horizontal" style="padding: 10px 0 0 10px;">
+        #foreach($f in $selectFieldList)
+            <div class="form-group">
+                <label for="${f.fieldname}" class="control-label col-lg-3">${f.fieldname}</label>
+                <div class="col-lg-6">
+
+                    #if($f.htmlComponent=="text")
+                        <input type="text" id="${f.fieldname}" name="${f.fieldname}" class="form-control" >
+                    #elseif($f.htmlComponent=="select")
+                        <select type="text" id="${f.fieldname}" name="${f.fieldname}" class="form-control" >
+                            <option value=""></option>
+                        </select>
+                    #elseif($f.htmlComponent=="password")
+                        <input type="password" id="${f.fieldname}" name="${f.fieldname}" class="form-control" >
+                    #elseif($f.htmlComponent=="textarea")
+                        \#include("/jss/my-rich-editor/richeditor-attach-jfinal-enjoy.html",contentName="${f.fieldname}",formIndex=0,formName="add${tableWrapper.beanname}PartForm",initContent="")
+                    #end
+                </div>
+                <!--错误提示-->
+                <label class="label label-danger">#(${f.fieldname}Info)</label>
+            </div>
+        #end
+
+
+        <!--提交-->
+        <div class="form-group">
+            <label for="" class="control-label col-lg-3"></label>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+    </div>
+    <div class="panel-footer">
+        panel-footer
+    </div>
+</div>
+
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/jquery.validate.js"></script>
+<!--<script src="/jslib/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>-->
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script src="/${tableWrapper.relativePath}/jslib/validator-orm/${tableWrapper.instancename}AddEditValidator.js"></script>
+
+\#end
+
+
+
+

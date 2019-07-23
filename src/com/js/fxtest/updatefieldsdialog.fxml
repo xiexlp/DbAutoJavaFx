@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="716.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="fieldListView" layoutX="14.0" layoutY="89.0" prefHeight="621.0" prefWidth="190.0" />
+      <Label layoutX="17.0" layoutY="59.0" text="要选择的字段" />
+      <TextField fx:id="tablenameTextField" layoutX="17.0" layoutY="14.0" />
+      <FlowPane fx:id="checkRadioPane" layoutX="210.0" layoutY="20.0" prefHeight="44.0" prefWidth="288.0" />
+      <Button layoutX="273.0" layoutY="569.0" mnemonicParsing="false" onAction="#doAddUpdateField" text="增加更新字段选择条件" />
+      <ListView fx:id="updateFieldListView" layoutX="217.0" layoutY="596.0" prefHeight="106.0" prefWidth="273.0" />
+      <Label layoutX="217.0" layoutY="573.0" text="选择条件" />
+      <Button layoutX="606.0" layoutY="569.0" mnemonicParsing="false" onAction="#doAddOrderBy" text="增加顺序选择" />
+      <Label layoutX="517.0" layoutY="573.0" text="选择的顺序结果" />
+      <ListView fx:id="orderByListView" layoutX="517.0" layoutY="596.0" prefHeight="106.0" prefWidth="200.0" />
+      <Label layoutX="230.0" layoutY="104.0" text="选用的html组件" />
+      <ChoiceBox fx:id="htmlCompnentChoiceBox" layoutX="225.0" layoutY="131.0" prefWidth="150.0" />
+      <Button layoutX="218.0" layoutY="485.0" mnemonicParsing="false" onAction="#doCreateUpdateFieldsCode" text="生成update html view代码" />
+      <Button layoutX="446.0" layoutY="485.0" mnemonicParsing="false" onAction="#doCreateListFieldsViewCode" text="生成list html view代码" />
+      <Button layoutX="217.0" layoutY="443.0" mnemonicParsing="false" onAction="#doCreateUpdateFieldsCodeFile" text="生成update fields view file" />
+
+      <Button layoutX="447.0" layoutY="443.0" mnemonicParsing="false" onAction="#doCreateListFieldsFileCode" text="生成list view file" />
+      <Button layoutX="221.0" layoutY="526.0" mnemonicParsing="false" onAction="#doCreateUpdateFieldsControllerCode" text="update controller" />
+      <Button layoutX="443.0" layoutY="526.0" mnemonicParsing="false" onAction="#doCreateListFieldsControllerCode" text="list controller" />
+      <Button layoutX="218.0" layoutY="399.0" mnemonicParsing="false" onAction="#doCreateUpdateFieldsServCode" text="生成update 服务代码" />
+      <Button layoutX="445.0" layoutY="399.0" mnemonicParsing="false" text="生成list服务代码" />
+
+
+      <Button layoutX="601.0" layoutY="443.0" mnemonicParsing="false" onAction="#doCreateAddFieldsFileCode" text="生成add view file" />
+
+
+   </children>
+</AnchorPane>

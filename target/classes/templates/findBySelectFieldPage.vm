@@ -1,0 +1,75 @@
+//放在server里面
+public PageList<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithType},int pageNo,int total){
+return ${tableWrapper.instancename}Dao.findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithComma},pageNo,total);
+}
+
+//--
+
+//放在server ex里面
+public PageList<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithType},int pageNo,int total){
+return ${tableWrapper.instancename}DaoEx.findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithComma},pageNo,total);
+}
+
+//--
+
+    //放在dao里面
+    public PageList<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithType},int pageNo,int total);
+
+//--
+
+    //放在daoimpl里面
+    public PageList<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithType},int pageNo,int total) {
+    PreparedStatement p = null;
+    ResultSet r = null;
+    Connection conn=null;
+    ${tableWrapper.beanname} ${tableWrapper.instancename}1 = null;
+    PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+    //List<${tableWrapper.beanname}> list = new ArrayList();
+        String sql = "${sqlAndParam.select_by_field_limit_sql}";
+        try {
+        conn =HikariDb.getConnection();
+        p=conn.prepareStatement(sql);
+        ${sqlAndParam.select_by_field_limit_param}
+        r = p.executeQuery();
+        while (r.next()) {
+        ${tableWrapper.instancename}1 = new ${tableWrapper.beanname}();
+        setFindParamNo(r, ${tableWrapper.instancename}1);
+        list.add(${tableWrapper.instancename}1);
+        }
+        } catch (Exception e) {
+        e.printStackTrace();
+        throw new DatabaseException(e);
+        } finally {
+        DbUtils.close(r, p);
+        DbUtils.closeConn(conn);
+        }
+        return list;
+        }
+
+    //放在daoimpl里面 no bean
+    public PageList<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}Page(${codeConcat.fieldConcatWithType},int pageNo,int total) {
+    PreparedStatement p = null;
+    ResultSet r = null;
+    Connection conn=null;
+    ${tableWrapper.beanname} ${tableWrapper.instancename}1 = null;
+    PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+    String sql = "${sqlAndParam.select_by_field_limit_sql}";
+    try {
+    conn =HikariDb.getConnection();
+    p=conn.prepareStatement(sql);
+    ${sqlAndParam.select_by_field_limit_param_no_bean}
+    r = p.executeQuery();
+    while (r.next()) {
+    ${tableWrapper.instancename}1 = new ${tableWrapper.beanname}();
+    setFindParamNo(r, ${tableWrapper.instancename}1);
+    list.add(${tableWrapper.instancename}1);
+    }
+    } catch (Exception e) {
+    e.printStackTrace();
+    throw new DatabaseException(e);
+    } finally {
+    DbUtils.close(r, p);
+    DbUtils.closeConn(conn);
+    }
+    return list;
+    }

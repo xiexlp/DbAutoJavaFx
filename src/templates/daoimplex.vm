@@ -1,0 +1,571 @@
+package ${tableWrapper.packagename}.daoimplex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+
+import com.js.common.db.*;
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.daoex.${tableWrapper.beanname}DaoEx;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
+import java.sql.Timestamp;
+import java.sql.Connection;
+import com.js.common.util.Globe;
+import java.sql.Statement;
+import ${tableWrapper.commonPackage}.util.PageList;
+
+
+public class ${tableWrapper.beanname}DaoimplEx implements ${tableWrapper.beanname}DaoEx {
+
+public String dbname= Globe.dbname;
+
+public List<${tableWrapper.beanname}> find(String hql) {
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+List<${tableWrapper.beanname}> list = new ArrayList();
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement(hql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(hql);
+r = p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+list.add(${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return list;
+
+}
+
+
+
+
+
+
+public List<${tableWrapper.beanname}> findNames(List<String> names,String wherehql){
+    PreparedStatement p = null;
+    ResultSet r = null;
+    Connection conn=null;
+    ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+    List<${tableWrapper.beanname}> list = new ArrayList();
+
+    StringBuffer sqlBuffer = new StringBuffer("select ");
+    for(String fieldname:names){
+    sqlBuffer.append(fieldname).append(",");
+    }
+    String select = sqlBuffer.substring(0,sqlBuffer.length()-1);
+    sqlBuffer.setLength(0);
+    sqlBuffer.append(select).append(" from ").append(" ${tableWrapper.tablename} ").append(wherehql);
+    String sql = sqlBuffer.toString();
+    try {
+    //p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement(sql);
+    conn =HikariDb.getConnection();
+    p=conn.prepareStatement(sql);
+    r = p.executeQuery();
+    while (r.next()) {
+    ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+    setFindParamNo(r, ${tableWrapper.instancename});
+//    for(String n:names){
+//        ${tableWrapper.instancename}.getMap().put(n,r.getString(n));
+//    }
+    list.add(${tableWrapper.instancename});
+    }
+    } catch (Exception e) {
+    e.printStackTrace();
+    throw new DatabaseException(e);
+    } finally {
+    DbUtils.close(r, p);
+    DbUtils.closeConn(conn);
+    //DbHotel.close${tableWrapper.Cdatabasename}Connection();
+    }
+    return list;
+    }
+
+    public PageList<${tableWrapper.beanname}> findNamesPage(List<String> names,String wherehql,int pageNo,int total){
+        PreparedStatement p = null;
+        ResultSet r = null;
+        Connection conn=null;
+        ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+        PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+
+        StringBuffer sqlBuffer = new StringBuffer("select ");
+        for(String fieldname:names){
+        sqlBuffer.append(fieldname).append(",");
+        }
+        String select = sqlBuffer.substring(0,sqlBuffer.length()-1);
+        sqlBuffer.setLength(0);
+        sqlBuffer.append(select).append(" from ").append(" ${tableWrapper.tablename} ").append(wherehql).append(" limit ?,?");
+        String sql = sqlBuffer.toString();
+        try {
+        //p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement(sql);
+        conn =HikariDb.getConnection();
+        p=conn.prepareStatement(sql);
+        p.setInt(1,list.getOffset());
+        p.setInt(2,list.getPageSize());
+        r = p.executeQuery();
+        while (r.next()) {
+        ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+        setFindParamNo(r, ${tableWrapper.instancename});
+        //for(String n:names){
+        //${tableWrapper.instancename}.getMap().put(n,r.getString(n));
+        //}
+        list.add(${tableWrapper.instancename});
+        }
+        } catch (Exception e) {
+        e.printStackTrace();
+        throw new DatabaseException(e);
+        } finally {
+        DbUtils.close(r, p);
+        DbUtils.closeConn(conn);
+        //DbHotel.close${tableWrapper.Cdatabasename}Connection();
+        }
+        return list;
+        }
+
+
+        public List<${tableWrapper.beanname}> findNameArray(String[] names,String wherehql){
+            PreparedStatement p = null;
+            ResultSet r = null;
+            Connection conn=null;
+            ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+            List<${tableWrapper.beanname}> list = new ArrayList();
+
+            StringBuffer sqlBuffer = new StringBuffer("select ");
+            for(String fieldname:names){
+            sqlBuffer.append(fieldname).append(",");
+            }
+            String select = sqlBuffer.substring(0,sqlBuffer.length()-1);
+            sqlBuffer.setLength(0);
+            sqlBuffer.append(select).append(" from ").append(" ${tableWrapper.tablename} ").append(wherehql);
+            String sql = sqlBuffer.toString();
+            try {
+            //p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement(sql);
+            conn =HikariDb.getConnection();
+            p=conn.prepareStatement(sql);
+            r = p.executeQuery();
+            while (r.next()) {
+            ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+            //for(String n:names){
+            //${tableWrapper.instancename}.getMap().put(n,r.getString(n));
+            //}
+            setFindParamNo(r, ${tableWrapper.instancename});
+            list.add(${tableWrapper.instancename});
+            }
+            } catch (Exception e) {
+            e.printStackTrace();
+            throw new DatabaseException(e);
+            } finally {
+            DbUtils.close(r, p);
+            DbUtils.closeConn(conn);
+            //DbHotel.close${tableWrapper.Cdatabasename}Connection();
+            }
+            return list;
+            }
+
+
+            public PageList<${tableWrapper.beanname}> findNameArrayPage(String[] names,String wherehql,int pageNo,int total){
+                PreparedStatement p = null;
+                ResultSet r = null;
+                Connection conn=null;
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+                PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+
+                StringBuffer sqlBuffer = new StringBuffer("select ");
+                for(String fieldname:names){
+                sqlBuffer.append(fieldname).append(",");
+                }
+                String select = sqlBuffer.substring(0,sqlBuffer.length()-1);
+                sqlBuffer.setLength(0);
+                sqlBuffer.append(select).append(" from ").append(" ${tableWrapper.tablename} ").append(wherehql).append(" limit ?,?");
+                String sql = sqlBuffer.toString();
+                try {
+                //p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement(sql);
+                conn =HikariDb.getConnection();
+                p=conn.prepareStatement(sql);
+                p.setInt(1,list.getOffset());
+                p.setInt(2,list.getPageSize());
+                r = p.executeQuery();
+                while (r.next()) {
+                ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                setFindParamNo(r, ${tableWrapper.instancename});
+                //for(String n:names){
+                //${tableWrapper.instancename}.getMap().put(n,r.getString(n));
+                //}
+                list.add(${tableWrapper.instancename});
+                }
+                } catch (Exception e) {
+                e.printStackTrace();
+                throw new DatabaseException(e);
+                } finally {
+                DbUtils.close(r, p);
+                DbUtils.closeConn(conn);
+                //DbHotel.close${tableWrapper.Cdatabasename}Connection();
+                }
+                return list;
+                }
+
+
+
+
+public int save(${tableWrapper.beanname} ${tableWrapper.instancename}) {
+PreparedStatement p = null;
+Connection conn=null;
+int result=-1;
+String sql = "${sqlParam.insert_sql}";
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection();
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+setStatement(p,${tableWrapper.instancename});
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return result;
+}
+
+
+
+##$tableWrapper.noKeySize
+#if($tableWrapper.noKeySize>=1)
+public int saveAutoReturnId(${tableWrapper.beanname} ${tableWrapper.instancename}) {
+PreparedStatement p = null;
+int result=-1;
+int returnID=-1;
+ResultSet r = null;
+Connection conn=null;
+String sql = "${sqlParam.insertAutoID_sql}";
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.insertAutoID_sql}");
+//p = DbHotel.getConnectionByName(dbname).prepareStatement(sql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+setStatementAutoId(p,${tableWrapper.instancename});
+result=p.executeUpdate();
+r = p.getGeneratedKeys();
+if (r != null&&r.next()) {
+returnID=r.getInt(1);
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return returnID;
+}
+#end
+
+##$tableWrapper.noKeySize
+#if($tableWrapper.noKeySize>=1)
+public int saveAutoId(${tableWrapper.beanname} ${tableWrapper.instancename}) {
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+try {
+String sql = "${sqlParam.insertAutoID_sql}";
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.insertAutoID_sql}");
+//p = DbHotel.getConnectionByName(dbname).prepareStatement(sql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.insertAutoID_sql}");
+setStatementAutoId(p,${tableWrapper.instancename});
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return result;
+}
+#end
+
+private void setStatement(PreparedStatement p,${tableWrapper.beanname} ${tableWrapper.instancename}) throws Exception{
+${sqlParam.insert_param}
+}
+
+#if($tableWrapper.noKeySize>=1)
+private void setStatementAutoId(PreparedStatement p,${tableWrapper.beanname} ${tableWrapper.instancename}) throws Exception{
+    ${sqlParam.insertAutoID_param}
+}
+#end
+
+public List<${tableWrapper.beanname}> findAll() {
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+List<${tableWrapper.beanname}> list = new ArrayList();
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.selectall_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.selectall_sql}");
+r = p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+list.add(${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return list;
+}
+
+public PageList<${tableWrapper.beanname}> findByPage(int pageNo,int total) {
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+String sql = "${sqlParam.select_limit_sql}";
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.select_limit_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+p.setInt(1,list.getOffset());
+p.setInt(2,list.getPageSize());
+r = p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+list.add(${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return list;
+}
+
+
+public PageList<${tableWrapper.beanname}> findByPageOrder(int pageNo,int total,String fieldname,boolean asc){
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+String sql = "${sqlParam.select_limit_sql_order}";
+StringBuffer sb = new StringBuffer(sql);
+sb.append(" order by ").append("a.").append(fieldname);
+if(asc) sb.append(" asc ");
+else sb.append(" desc ");
+sb.append(" limit ?,?");
+
+try {
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sb.toString());
+p.setInt(1,list.getOffset());
+p.setInt(2,list.getPageSize());
+r = p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+list.add(${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return list;
+}
+
+        public PageList<${tableWrapper.beanname}> find_OrderBy_ByPage(int pageNo,int total,String sortBy,int sort,int pageSize){
+        PreparedStatement p = null;
+        ResultSet r = null;
+        Connection conn=null;
+        ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+        PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total,pageSize);
+        String sql = "${sqlParam.selectall_sql}";
+        StringBuffer sb = new StringBuffer(sql);
+        sb.append(" where 1=1 ");
+        if(!sortBy.equalsIgnoreCase("")) {
+        sb.append(" a.").append(StringTool.humpToUnderLine(sortBy)).append(" ");
+        }else sb.append(" a.createTime ");
+        if(sort==0) sb.append(" desc ");
+        else if(sort==1) sb.append(" asc ");
+        sb.append(" limit ?,? ");
+        try {
+        conn =HikariDb.getConnection();
+        p=conn.prepareStatement(sb.toString());
+        p.setInt(1,list.getOffset());
+        p.setInt(2,list.getPageSize());
+        r = p.executeQuery();
+        while (r.next()) {
+        ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+        setFindParamNo(r, ${tableWrapper.instancename});
+        list.add(${tableWrapper.instancename});
+        }
+        } catch (Exception e) {
+        e.printStackTrace();
+        throw new DatabaseException(e);
+        } finally {
+        DbUtils.close(r, p);
+        DbUtils.closeConn(conn);
+        //DbHotel.close${tableWrapper.Cdatabasename}Connection();
+        }
+        return list;
+
+        }
+
+
+
+
+public int update($tableWrapper.beanname $tableWrapper.instancename) {
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.update_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.update_sql}");
+${sqlParam.update_param}
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return result;
+}
+
+public int delete($sqlParam.key_arguments) {
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.del_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.del_sql}");
+${sqlParam.del_param}
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return result;
+}
+
+        public int updateSet(String set,String where){
+        PreparedStatement p = null;
+        int result=-1;
+        Connection conn=null;
+        StringBuffer sqlBuffer = new StringBuffer("update ").append(" ${tableWrapper.tablename} ").append(set).append(" ").append(where);
+        String sql = sqlBuffer.toString();
+        System.out.println("update sql:"+sql);
+        try {
+        conn =HikariDb.getConnection();
+        p=conn.prepareStatement(sql);
+        result=p.executeUpdate();
+        } catch (Exception e) {
+        e.printStackTrace();
+        throw new DatabaseException(e);
+        } finally {
+        DbUtils.close(p);
+        DbUtils.closeConn(conn);
+        }
+        return result;
+        }
+
+        public int deleteWhere(String where){
+        PreparedStatement p = null;
+        int result=-1;
+        Connection conn=null;
+        StringBuffer sqlBuffer = new StringBuffer("delete from ").append(" ${tableWrapper.tablename} ").append(where);
+        String sql = sqlBuffer.toString();
+        System.out.println("delete sql:"+sql);
+        try {
+        conn =HikariDb.getConnection();
+        p=conn.prepareStatement(sql);
+        result=p.executeUpdate();
+        } catch (Exception e) {
+        e.printStackTrace();
+        throw new DatabaseException(e);
+        } finally {
+        DbUtils.close(p);
+        DbUtils.closeConn(conn);
+        }
+        return result;
+        }
+
+
+
+public ${tableWrapper.beanname} get($sqlParam.key_arguments) {
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.select_byID_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.select_byID_sql}");
+${sqlParam.del_param}
+r=p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} =new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return ${tableWrapper.instancename};
+}
+
+
+
+
+${sqlParam.select_param}
+
+${sqlParam.select_param_no}
+
+}

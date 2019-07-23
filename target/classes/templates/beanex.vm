@@ -1,0 +1,102 @@
+package ${tableWrapper.packagename}.ormex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import java.sql.Timestamp;
+import java.sql.Date;
+import java.util.HashMap;
+import java.util.Map;
+import com.js.common.util.TimeUtil;
+public class ${tableWrapper.beanname}Ex{
+
+#foreach( $f in $list )
+private $f.javatype $f.fieldname;
+#end
+
+##private Map<String,Object> map=new HashMap();
+
+public ${tableWrapper.beanname}Ex(){}
+
+#foreach( $f in $list )
+    #if($f.javatype=="Timestamp")
+    public String get${f.Capitalname}Format(){
+        return TimeUtil.timestame2String($f.fieldname);
+    }
+    #end
+#end
+
+#foreach( $f in $list )
+public $f.javatype get${f.Capitalname}(){
+    return $f.fieldname;
+}
+
+public void set${f.Capitalname}($f.javatype $f.fieldname){
+this.$f.fieldname = $f.fieldname;
+}
+
+
+##    #if($f.javatype=="int")
+##        public $f.javatype get${f.Capitalname}Map(){
+##       return Integer.parseInt((String)map.get("$f.tableFieldName"));
+##    #elseif($f.javatype=="String")
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return (String)map.get("$f.tableFieldName");
+##    #elseif($f.javatype=="long")
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return Long.parseLong((String)map.get("$f.tableFieldName"));
+##    #elseif($f.javatype=="Timestamp")
+##    public String get${f.Capitalname}Map(){
+##        return TimeUtil.timestame2String((Timestamp)map.get("$f.tableFieldName"));
+##    #elseif($f.javatype=="Date")
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return (Date)map.get("$f.tableFieldName");
+##    #elseif($f.javatype=="double")
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return Double.parseDouble((String)map.get("$f.tableFieldName"));
+##    #elseif($f.javatype=="float")
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return Float.parseFloat((String)map.get("$f.tableFieldName"));
+##    #else
+##    public $f.javatype get${f.Capitalname}Map(){
+##        return (String)map.get("$f.tableFieldName");
+##    #end
+##}
+
+
+#end
+
+
+#foreach( $f in $list )
+public ${tableWrapper.beanname}Ex build${f.Capitalname}($f.javatype $f.fieldname){
+this.$f.fieldname = $f.fieldname;
+return this;
+}
+#end
+
+
+
+
+
+
+##public Map getMap(){
+##if(map==null){
+##map = new HashMap();
+##}
+##return map;
+##}
+##
+##public Map toMap(){
+##if(map==null){
+##    map = new HashMap();
+##    #foreach( $f in $list )
+##    map.put("${f.tableFieldName}",this.get${f.Capitalname}());
+##    #end
+##}
+##return map;
+##}
+
+
+}

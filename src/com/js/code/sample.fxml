@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="923.0" prefWidth="1301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.js.code.Controller">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="690.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="打开" />
+                  <MenuItem mnemonicParsing="false" text="另存为" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="代码生成">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#doMakeConfigCodeFile" text="生成bean config" />
+              <MenuItem mnemonicParsing="false" onAction="#doMakeBeanCodeFile" text="生成bean" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeDaoCodeFile" text="生成dao" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeDaoImplCodeFile" text="生成daoimpl" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeServCodeFile" text="生成serv" />
+
+                <MenuItem mnemonicParsing="false" onAction="#doMakeConfigExCodeFile" text="生成bean config ex" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeBeanExCodeFile" text="生成beanEx" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeDaoExCodeFile" text="生成daoEx" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeDaoImplExCodeFile" text="生成daoimplEx" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeServExCodeFile" text="生成servEx" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeControllerCodeFile" text="生成controller" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeControllerExCodeFile" text="生成controllerex" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="生成View文件">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewNewCodeFile" text="生成viewnew" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewEditCodeFile" text="生成viewedit" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewListCodeFile" text="生成viewlist" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewAddCodeFile" text="生成viewadd" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewUpdateCodeFile" text="生成viewupdate" />
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewSCodeFile" text="生成views" />
+
+                <MenuItem mnemonicParsing="false" onAction="#doMakeViewPartSCodeFile" text="生成views part page" />
+
+                <MenuItem mnemonicParsing="false" onAction="#doMakeValidatorJSCodeFile" text="生成 javascript验证文件" />
+
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="生成Ex文件">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeConfigExCodeFile" text="生成bean config ex" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeBeanExCodeFile" text="生成beanEx" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeDaoExCodeFile" text="生成daoEx" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeDaoImplExCodeFile" text="生成daoimplEx" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeServExCodeFile" text="生成servEx" />
+                  <MenuItem mnemonicParsing="false" onAction="#doMakeControllerExCodeFile" text="生成controllerex" />
+              </items>
+            </Menu>
+
+            <Menu mnemonicParsing="false" text="生成Controller和controller文件">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeControllerExCodeFile" text="生成controllerex" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeViewFileAll" text="一次生成所有的 view file" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeViewAddCodeFile" text="生成viewadd" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeViewUpdateCodeFile" text="生成viewupdate" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeViewSCodeFile" text="生成views" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeValidatorJSCodeFile" text="生成 javascript验证文件" />
+                </items>
+            </Menu>
+
+            <Menu mnemonicParsing="false" text="批量生成">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeCodeFileAll" text="一次生成所有的bean ex view file" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeBeanFileAll" text="一次生成所有的bean和ex file" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeBeanExFileAll" text="一次生成所有的 ex file" />
+                    <MenuItem mnemonicParsing="false" onAction="#doMakeViewFileAll" text="一次生成所有的 view file" />
+                </items>
+            </Menu>
+
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="3.0" layoutY="231.0" prefHeight="738.0" prefWidth="1256.0">
+        <items>
+            <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="669.0" prefWidth="371.0">
+               <content>
+                         <ListView fx:id="tableList" layoutY="7.0" prefHeight="521.0" prefWidth="287.0" />
+               </content>
+            </ScrollPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="795.0">
+               <children>
+                  <TabPane layoutX="8.0" layoutY="8.0" prefHeight="518.0" prefWidth="850.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="生成内容">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="413.0" prefWidth="674.0">
+                                 <children>
+                                  <AnchorPane layoutX="239.0" layoutY="23.0" minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="200.0" />
+                                    <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="469.0" prefWidth="820.0">
+                                       <content>
+                                          <TextArea fx:id="sqlTextArea" prefHeight="473.0" prefWidth="808.0" />
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Untitled Tab 2">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Pane layoutX="11.0" layoutY="27.0" prefHeight="200.0" prefWidth="874.0">
+         <children>
+            <Label layoutX="231.0" layoutY="7.0" text="项目目录" />
+            <TextField fx:id="projectDirTextField" layoutX="285.0" layoutY="3.0" prefHeight="23.0" prefWidth="510.0" />
+            <Button layoutX="796.0" layoutY="3.0" mnemonicParsing="false" onAction="#doSetProjectDirPath" text="打开文件" />
+            <Label layoutX="225.0" layoutY="28.0" text="基本程序包" />
+            <TextField fx:id="packageNameTextField" layoutX="285.0" layoutY="28.0" prefHeight="23.0" prefWidth="220.0" text="com.js.jshop" />
+            <Label layoutX="24.0" layoutY="14.0" text="数据库" />
+            <TextField fx:id="databaseTextField" layoutX="24.0" layoutY="39.0" text="nshop" />
+            <Button layoutX="172.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleDataBaseButton" text="刷新" />
+            <Label layoutX="237.0" layoutY="51.0" text="通用包" />
+            <TextField fx:id="commonPackageTextField" layoutX="285.0" layoutY="55.0" prefHeight="23.0" prefWidth="220.0" text="com.js.common" />
+            <Label layoutX="178.0" layoutY="80.0" text="网页webrelativedir" />
+            <TextField fx:id="webRelativeTextField" layoutX="285.0" layoutY="84.0" prefHeight="23.0" prefWidth="264.0" />
+            <Label layoutX="173.0" layoutY="113.0" text="当前controller程序包" />
+            <TextField fx:id="currentPackageNameTextField" layoutX="285.0" layoutY="109.0" prefHeight="23.0" prefWidth="264.0" text="com.js.jshop.boot" />
+            <Label layoutX="231.0" layoutY="138.0" text="相对路径" />
+            <TextField fx:id="relativePathTextField" layoutX="285.0" layoutY="140.0" prefHeight="23.0" prefWidth="161.0" />
+            <ListView fx:id="codeModeList" layoutX="24.0" layoutY="70.0" prefHeight="100.0" prefWidth="143.0" />
+            <Label layoutX="622.0" layoutY="155.0" text="项目名" />
+            <TextField fx:id="programeNameTextField" layoutX="674.0" layoutY="151.0" prefHeight="23.0" prefWidth="181.0" />
+            <Button layoutX="660.0" layoutY="175.0" mnemonicParsing="false" onAction="#configSaveProgram" text="保存项目配置" />
+            <Label layoutX="557.0" layoutY="43.0" text="项目配置列表" />
+            <ListView fx:id="programeRecentListView" layoutX="640.0" layoutY="27.0" prefHeight="118.0" prefWidth="220.0" />
+            <Button layoutX="764.0" layoutY="175.0" mnemonicParsing="false" onAction="#configReloadRecent" text="重新load配置" />
+         </children>
+      </Pane>
+      <Pane layoutX="-4.0" layoutY="760.0" prefHeight="213.0" prefWidth="1301.0">
+         <children>
+            <Label fx:id="tableLabel" layoutX="14.0" layoutY="156.0" text="提示信息：无" />
+            <ToolBar layoutX="14.0" layoutY="14.0" prefHeight="41.0" prefWidth="1273.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#doCreateBeanCode" text="bean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateDaoCode" text="dao" />
+                  <Button mnemonicParsing="false" onAction="#doCreateDaoImplCode" text="daoimpl" />
+                  <Button mnemonicParsing="false" onAction="#doCreateServCode" text="serv" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanExCode" text="beanEx" />
+                  <Button mnemonicParsing="false" onAction="#doCreateDaoExCode" text="daoEx" />
+                  <Button mnemonicParsing="false" onAction="#doCreateDaoImplExCode" text="daoimplEx" />
+                  <Button mnemonicParsing="false" onAction="#doCreateServExCode" text="servEx" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControllerCode" text="control" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControllerExCode" text="controlex" />
+                  <!--<Button mnemonicParsing="false" onAction="#doIndexDaoCode" text="indexDao" />-->
+                  <!--<Button mnemonicParsing="false" onAction="#doIndexServiceCode" text="indexService" />-->
+                  <Button mnemonicParsing="false" onAction="#doShowFindCodeDialog" text="find对话框" />
+                  <Button mnemonicParsing="false" onAction="#doShowUpdateCodeDialog" text="update对话框" />
+                  <Button mnemonicParsing="false" onAction="#doShowUpdateCodeWithKeyDialog" text="update对话框包含key" />
+                  <Button mnemonicParsing="false" onAction="#doShowUpdateCodeConditionDialog" text="update对话框Condition" />
+                  <Button mnemonicParsing="false" text="delete" />
+
+                          </items>
+            </ToolBar>
+            <ToolBar layoutX="8.0" layoutY="61.0" prefHeight="33.0" prefWidth="1281.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#doCreateGetBeanFromRequestCode" text="getBeanFromRequest" />
+                  <Button mnemonicParsing="false" onAction="#doCreateGetBeanFromRequestEditCode" text="getBeanFromRequestEdit" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControlNewBeanCode" text="control_newbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControlEditBeanCode" text="control_editbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControlListCode" text="control_list" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControlDeleteCode" text="control_delete" />
+                  <Button mnemonicParsing="false" onAction="#doCreateControlAllCode" text="control_all_method" />
+                  <Button mnemonicParsing="false" onAction="#doCreateValidatorJs" text="生成validatorjs文件" />
+                  <Button mnemonicParsing="false" onAction="#doShowUpdateFieldsDialog" text="部分字段列表更新增加" />
+                  <Button mnemonicParsing="false" onAction="#doShowUpdateTabFieldsDialog" text="部分更新tab" />
+              </items>
+            </ToolBar>
+            <ToolBar layoutX="8.0" layoutY="100.0" prefHeight="50.0" prefWidth="1281.0">
+              <items>
+                <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanNewViewCode" text="viewnewbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanListViewCode" text="viewlistbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanEditViewCode" text="vieweditbean" />
+
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanAddViewCode" text="viewAddbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanSViewCode" text="viewSbean" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanUpdateViewCode" text="viewUpdatebean" />
+
+                  <Button mnemonicParsing="false" onAction="#doCreateSelectOptionCode" text="生成option" />
+                  <Button mnemonicParsing="false" onAction="#doCreateRouteCode" text="href" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanWithAnnoCode" text="生成bean带注释文件" />
+                  <Button mnemonicParsing="false" onAction="#doCreateBeanExWithAnnoCode" text="生成beanex带注释文件" />
+                  <Button mnemonicParsing="false" onAction="#doShowComplexFindDialog" prefHeight="23.0" prefWidth="200.0" text="复杂查询" />
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button mnemonicParsing="false" text="Button" />
+                    </items>
+                  </ToolBar>
+              </items>
+            </ToolBar>
+         </children>
+      </Pane>
+      <Label layoutX="899.0" layoutY="71.0" text="表格创建或更新Bean" />
+      <TextField fx:id="beanNameTextField" layoutX="899.0" layoutY="95.0" prefHeight="23.0" prefWidth="264.0" />
+      <Button layoutX="899.0" layoutY="142.0" mnemonicParsing="false" onAction="#doCreateTableFromBean" text="创建" />
+      <Button layoutX="955.0" layoutY="142.0" mnemonicParsing="false" onAction="#doUpdateTableFromBean" text="更新" />
+      <Button layoutX="901.0" layoutY="186.0" mnemonicParsing="false" onAction="#copyTextArea" text="复制文本区" />
+       <Button layoutX="980.0" layoutY="186.0" mnemonicParsing="false" onAction="#cutTextArea" text="剪切文本区" />
+       <Button layoutX="1060.0" layoutY="186.0" mnemonicParsing="false" onAction="#pasteTextArea" text="粘贴文本区" />
+       <Button layoutX="1140.0" layoutY="186.0" mnemonicParsing="false" onAction="#doShowValidatorDialog" text="验证框架" />
+       <Button layoutX="1220.0" layoutY="186.0" mnemonicParsing="false" onAction="#doShowValidateDialog" text="验证框架2" />
+      <ToolBar layoutX="901.0" layoutY="15.0" prefHeight="40.0" prefWidth="331.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#doCreateBeanListTableViewCode" text="viewlisttable" />
+            <Button mnemonicParsing="false" onAction="#doMakeServerReadCodeFile" text="ServerRead" />
+            <Button mnemonicParsing="false" onAction="#doMakeServerUpdateCodeFile" text="ServerUpdate" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

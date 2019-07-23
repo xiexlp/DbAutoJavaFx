@@ -1,0 +1,44 @@
+//jfinal
+public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequestEdit(){
+${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+#foreach( $f in $list )
+##private $f.javatype $f.fieldname;
+        #if($f.javatype=="int")
+        int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+        #elseif($f.javatype=="long"&&${f.fieldname}!="updateTime")
+        long ${f.fieldname}=getLongPara("${f.fieldname}",0);
+        #elseif($f.javatype=="String")
+        String ${f.fieldname} = getStrPara("${f.fieldname}","");
+        #elseif($f.javatype=="long"&&${f.fieldname}=="updateTime")
+        long ${f.fieldname}=${tableWrapper.instancename}.set${f.Capitalname}(System.currentTimeMillis());
+        #elseif($f.javatype=="Timestamp")
+        Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+        #end
+        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+#end
+return ${tableWrapper.instancename};
+}
+
+
+//springboot
+public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequestEdit(HttpServletRequest request){
+${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+#foreach( $f in $list )
+##private $f.javatype $f.fieldname;
+        #if($f.javatype=="int")
+        int ${f.fieldname}=getIntPara(request,"${f.fieldname}",0);
+        #elseif($f.javatype=="long"&&${f.fieldname}!="updateTime")
+        long ${f.fieldname}=getLongPara(request,"${f.fieldname}",0);
+        #elseif($f.javatype=="String")
+        String ${f.fieldname} = getStrPara(request,"${f.fieldname}","");
+        #elseif($f.javatype=="long"&&${f.fieldname}=="updateTime")
+        long ${f.fieldname}=System.currentTimeMillis();
+        #elseif($f.javatype=="Timestamp")
+        Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+        #end
+        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+#end
+return ${tableWrapper.instancename};
+}
+
+

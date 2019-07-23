@@ -1,0 +1,19 @@
+package ${tableWrapper.packagename}.orm;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import java.sql.Timestamp;
+import ${tableWrapper.commonPackage}.anno.TableAnno;
+import ${tableWrapper.packagename}.ormex.${tableWrapper.beanname}Ex;
+import java.util.HashMap;
+import java.util.Map;
+
+@TableAnno(name="${tableWrapper.tablename}")
+public class $tableWrapper.beanname extends ${tableWrapper.beanname}Ex{
+
+
+
+}

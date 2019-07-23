@@ -1,0 +1,52 @@
+package ${tableWrapper.packagename}.daoex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+
+public interface ${tableWrapper.beanname}DaoEx{
+
+public int save(${tableWrapper.beanname} ${tableWrapper.instancename});
+#if($tableWrapper.noKeySize>=1)
+public int saveAutoId(${tableWrapper.beanname} ${tableWrapper.instancename});
+
+public int saveAutoReturnId(${tableWrapper.beanname} ${tableWrapper.instancename});
+#end
+
+
+public ${tableWrapper.beanname} get($sqlParam.key_arguments);
+
+
+
+public int delete($sqlParam.key_arguments);
+
+public int update(${tableWrapper.beanname} ${tableWrapper.instancename});
+
+public int updateSet(String set,String where);
+
+public int deleteWhere(String where);
+
+public List<${tableWrapper.beanname}> find(String hql);
+
+public List<${tableWrapper.beanname}> findNames(List<String> names,String wherehql);
+
+    public PageList<${tableWrapper.beanname}> findNamesPage(List<String> names,String wherehql,int pageNo,int total);
+        public List<${tableWrapper.beanname}> findNameArray(String[] names,String wherehql);
+
+            public PageList<${tableWrapper.beanname}> findNameArrayPage(String[] names,String wherehql,int pageNo,int total);
+
+
+public List<${tableWrapper.beanname}> findAll();
+
+        public PageList<${tableWrapper.beanname}> find_OrderBy_ByPage(int pageNo,int total,String sortBy,int sort,int pageSize)
+
+public PageList<${tableWrapper.beanname}> findByPage(int pageNo,int total);
+
+public PageList<${tableWrapper.beanname}> findByPageOrder(int pageNo,int total,String fieldname,boolean asc);
+
+}

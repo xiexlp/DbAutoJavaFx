@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DbAutoJavaFx.iml" filepath="$PROJECT_DIR$/DbAutoJavaFx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MathIntestJavaFx/MathIntestJavaFx.iml" filepath="$PROJECT_DIR$/MathIntestJavaFx/MathIntestJavaFx.iml" />
+    </modules>
+  </component>
+</project>

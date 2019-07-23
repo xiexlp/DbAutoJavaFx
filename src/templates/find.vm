@@ -1,0 +1,11 @@
+//放在server里面
+public List<${tableWrapper.beanname}> findByItemID(int itemID){
+    return itemSpecDao.findByItemID(itemID);
+}
+
+
+//放在server里面
+public List<${tableWrapper.beanname}> findBy${codeConcat.keyConcat}(${codeConcat.keyConcatWithType}){
+//return itemSpecDao.findByItemID(itemID);
+return ${tableWrapper.instancename}Dao.findBy${codeConcat.keyConcat}(${codeConcat.keyConcatWithComma});
+}

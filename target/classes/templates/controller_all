@@ -1,0 +1,126 @@
+public void ${tableWrapper.instancename}new(){
+String method = getRequest().getMethod();
+if(method.equalsIgnoreCase("GET")) {
+//List<Group> groups = GroupServ.n().findAll();
+    //  setAttr("groups",groups);
+    //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+        //System.out.println("manus size:"+manus.size());
+        //setAttr("manus",manus);
+        render("${tableWrapper.instancename}new.html");
+        }else if(method.equalsIgnoreCase("POST")){
+        User user = getUserFromRequest();
+        ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest();
+        //int r = UserServ.n().saveAutoId(user);
+        int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+        if(r>0){
+        redirect("/admin/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        }else {
+        System.out.println("新增失败");
+        }
+        }
+        }
+
+        //放在controller delete方法
+        public void ${tableWrapper.instancename}del(){
+        //int departID = getIntPara("departID",0);
+        int ${tableWrapper.keynameHump}  = getParaToInt("${tableWrapper.keynameHump}");
+        if(${tableWrapper.keynameHump}==0)  return;
+        int r = ${tableWrapper.beanname}Serv.n().delete(${tableWrapper.keynameHump});
+        if(r>0) redirect("/admin/${tableWrapper.instancename}/${tableWrapper.instancename}list");
+        }
+
+        public void ${tableWrapper.instancename}edit(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                System.out.println("group size:"+groups.size());
+                //int userID= getIntPara("userID", 1);
+                int ${tableWrapper.keynameHump} = getIntPara("${tableWrapper.keynameHump}",1);
+                if(${tableWrapper.keynameHump}==0) {
+                System.out.println("出错");
+                return;
+                }
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get(${tableWrapper.keyname});
+                //setAttr("groups",groups);
+                setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                render("${tableWrapper.instancename}edit.html");
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit();
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.updateUsernamePasswordUpdateTimeGroupIDGroupNameUserTypeCreditMobilePhoneEmailMobileSntEmailSntStatusBriefSaltAvatar(user);
+                if(r>0) redirect("/admin/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                else {
+                System.out.println("出错");
+                }
+                }
+                }
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequest(){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                ##$f.iskey 主键
+                    #if($f.iskey=="PRI")
+                    #else
+                        #if($f.javatype=="int")
+                            int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+                        #elseif($f.javatype=="String")
+                            String ${f.fieldname} = getStrPara("${f.fieldname}","");
+                        #elseif($f.javatype=="long")
+                            long ${f.fieldname}=${tableWrapper.instancename}.set${f.Capitalname}(System.currentTimeMillis());
+                        #end
+                        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                    #end
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequestEdit(){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                    #if($f.javatype=="int")
+                        int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+                    #elseif($f.javatype=="String")
+                        String ${f.fieldname} = getStrPara("${f.fieldname}","");
+                    #elseif($f.javatype=="long")
+                        long ${f.fieldname}=${tableWrapper.instancename}.set${f.Capitalname}(System.currentTimeMillis());
+                    #end
+                    ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+
+                //controller list方法，放在controller里面
+                public void ${tableWrapper.instancename}list(){
+                int pageNo = getIntPara("pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}list?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl);
+                render("${tableWrapper.instancename}list.html");
+                }
+
+                //controller list方法，放在controller里面
+                public void ${tableWrapper.instancename}s(){
+                int pageNo = getIntPara("pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:"+${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}s?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl);
+                render("${tableWrapper.instancename}s.html");
+                }
+
+
+

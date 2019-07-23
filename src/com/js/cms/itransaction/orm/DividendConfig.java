@@ -1,0 +1,20 @@
+package com.js.cms.itransaction.orm;
+
+/**
+* last update time:"19-04-08 11:16:46"
+* last update user:pku
+*/
+
+import java.sql.Timestamp;
+
+import com.js.cms.itransaction.ormex.DividendConfigEx;
+import com.js.common.anno.TableAnno;
+import java.util.HashMap;
+import java.util.Map;
+
+@TableAnno(name="yang_dividend_config")
+public class DividendConfig extends DividendConfigEx {
+
+
+
+}

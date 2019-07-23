@@ -1,0 +1,21 @@
+package ${tableWrapper.packagename}.configex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import java.sql.Timestamp;
+
+public class ${tableWrapper.beanname}ConfigEx{
+
+#foreach( $f in $list )
+public static final String $f.capitalAllName="$f.fieldname";
+#end
+
+#foreach( $f in $list )
+public static final String T_$f.capitalAllName="$f.tableFieldName";
+#end
+
+
+}

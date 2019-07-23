@@ -1,0 +1,104 @@
+package ${tableWrapper.packagenameCurrent}.controller;
+
+//import com.js.common.util.ControllerAdapter;
+import com.js.common.util.PageList;
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.serv.${tableWrapper.beanname}Serv;
+import ${tableWrapper.packagenameCurrent}.controllerex.${tableWrapper.beanname}ControllerEx;
+import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+@RequestMapping("/${tableWrapper.instancename}")
+public class ${tableWrapper.beanname}Controller extends ${tableWrapper.beanname}ControllerEx {
+
+@RequestMapping("/${tableWrapper.instancename}add")
+public ModelAndView ${tableWrapper.instancename}add(HttpServletRequest request){
+ModelAndView view=new ModelAndView("${tableWrapper.instancename}/${tableWrapper.instancename}add.html");
+String method = request.getMethod();
+if(method.equalsIgnoreCase("GET")) {
+//List<Group> groups = GroupServ.n().findAll();
+    //  setAttr("groups",groups);
+    //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+        //System.out.println("manus size:"+manus.size());
+        //setAttr("manus",manus);
+        //render("${tableWrapper.instancename}new.html");
+        }else if(method.equalsIgnoreCase("POST")){
+        //User user = getUserFromRequest(request);
+        ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest(request);
+        //int r = UserServ.n().saveAutoId(user);
+        int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+        if(r>0){
+        view.setViewName("redirect:/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        //redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        }else {
+        System.out.println("新增失败");
+        }
+        }
+        return view;
+        }
+
+        @RequestMapping("/${tableWrapper.instancename}update")
+        public ModelAndView ${tableWrapper.instancename}update(HttpServletRequest request){
+        //ModelAndView view=new ModelAndView();
+        ModelAndView view=new ModelAndView("${tableWrapper.instancename}/${tableWrapper.instancename}update.html");
+        String method = request.getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                //System.out.println("group size:"+groups.size());
+                //int userID= getIntPara(request,"userId", 1);
+                int ${tableWrapper.keynameHump} = getIntPara(request,"${tableWrapper.keynameHump}",1);
+                if(${tableWrapper.keynameHump}==0) {
+                System.out.println("出错");
+                return null;
+                }
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get(${tableWrapper.keynameHump});
+                //setAttr("groups",groups);
+                //setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                view.addObject("${tableWrapper.instancename}",${tableWrapper.instancename});
+                //render("${tableWrapper.instancename}edit.html");
+
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit(request);
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return null;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.update(${tableWrapper.instancename});
+                if(r>0){
+                view.addObject("redirect:/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                //redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                }
+                else {
+                System.out.println("出错");
+                }
+                }
+                return view;
+                }
+
+                //controller list方法，放在controller里面
+                @RequestMapping("/${tableWrapper.instancename}s")
+                public ModelAndView ${tableWrapper.instancename}s(HttpServletRequest request){
+                //ModelAndView view=new ModelAndView();
+                ModelAndView view=new ModelAndView("${tableWrapper.instancename}/${tableWrapper.instancename}s.html");
+                int pageNo = getIntPara(request,"pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                //setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                view.addObject("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:"+${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}s?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl,view);
+                view.setViewName("${tableWrapper.instancename}s.html");
+                //render("${tableWrapper.instancename}s.html");
+                return view;
+
+                }
+
+
+}

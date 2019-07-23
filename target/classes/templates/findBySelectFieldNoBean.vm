@@ -1,0 +1,49 @@
+//放在server里面
+public List<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType}){
+return ${tableWrapper.instancename}Dao.findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithComma});
+}
+
+//--
+
+//放在server ex里面
+public List<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType}){
+return ${tableWrapper.instancename}DaoEx.findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithComma});
+}
+
+//--
+
+
+    //放在dao里面
+    public List<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType});
+
+//--
+
+    //放在daoimpl里面
+    public List<${tableWrapper.beanname}> findBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType}) {
+        PreparedStatement p = null;
+        ResultSet r = null;
+    Connection conn=null;
+    ${tableWrapper.beanname} ${tableWrapper.instancename}1 = null;
+      //  PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+        List<${tableWrapper.beanname}> list = new ArrayList();
+            String sql = "${sqlAndParam.select_by_field_sql}";
+            try {
+            conn =HikariDb.getConnection();
+            p=conn.prepareStatement(sql);
+            ${sqlAndParam.select_by_field_param_no_bean}
+            r = p.executeQuery();
+            while (r.next()) {
+                ${tableWrapper.instancename}1 = new ${tableWrapper.beanname}();
+                setFindParamNo(r, ${tableWrapper.instancename}1);
+                list.add(${tableWrapper.instancename}1);
+            }
+            } catch (Exception e) {
+            e.printStackTrace();
+            throw new DatabaseException(e);
+            } finally {
+            DbUtils.close(r, p);
+            DbUtils.closeConn(conn);
+            }
+            return list;
+            }
+

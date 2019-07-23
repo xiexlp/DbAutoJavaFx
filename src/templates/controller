@@ -1,0 +1,96 @@
+package ${tableWrapper.packagenameCurrent}.controller;
+
+import com.js.common.util.ControllerAdaper;
+import com.js.common.util.PageList;
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.serv.${tableWrapper.beanname}Serv;
+import ${tableWrapper.packagenameCurrent}.controllerex.${tableWrapper.beanname}ControllerEx;
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+import java.sql.Timestamp;
+
+
+public class ${tableWrapper.beanname}Controller extends ${tableWrapper.beanname}ControllerEx {
+
+public void ${tableWrapper.instancename}add(){
+String method = getRequest().getMethod();
+if(method.equalsIgnoreCase("GET")) {
+//List<Group> groups = GroupServ.n().findAll();
+    //  setAttr("groups",groups);
+    //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+        //System.out.println("manus size:"+manus.size());
+        //setAttr("manus",manus);
+        //render("${tableWrapper.instancename}new.html");
+        }else if(method.equalsIgnoreCase("POST")){
+        //User user = getUserFromRequest();
+        ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest();
+        //int r = UserServ.n().saveAutoId(user);
+
+        #if($tableWrapper.keySize==1)
+            int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+        #else
+            int r=${tableWrapper.beanname}Serv.n().save(${tableWrapper.instancename});
+        #end
+
+
+        if(r>0){
+        redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        }else {
+        System.out.println("新增失败");
+        }
+        }
+        }
+
+
+        public void ${tableWrapper.instancename}update(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                //System.out.println("group size:"+groups.size());
+                //int userID= getIntPara("userID", 1);
+
+                #foreach($f in $tableWrapper.bKeyFieldWrapperList)
+                    int ${f.fieldname} = getIntPara("${f.fieldname}",1);
+                    if(${f.fieldname}==0) {
+                        System.out.println("出错");
+                        return;
+                    }
+                #end
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get($sqlParam.key_argumentNoType);
+                //setAttr("groups",groups);
+                setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                //render("${tableWrapper.instancename}update.html");
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit();
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.update(${tableWrapper.instancename});
+                if(r>0) redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                else {
+                System.out.println("出错");
+                }
+                }
+                }
+
+
+//controller list方法，放在controller里面
+public void ${tableWrapper.instancename}s(){
+int pageNo = getIntPara("pageNo",1);
+PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+System.out.println("list size:"+${tableWrapper.instancename}list.size());
+String actionUrl = "${tableWrapper.instancename}s?1=1";
+setPageInfo(${tableWrapper.instancename}list, actionUrl);
+//render("${tableWrapper.instancename}s.html");
+}
+
+
+
+
+}

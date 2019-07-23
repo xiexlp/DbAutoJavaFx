@@ -1,0 +1,178 @@
+package ${tableWrapper.packagenameCurrent}.controllerex;
+
+import com.js.common.util.ControllerAdapter;
+import com.js.common.util.PageList;
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.serv.${tableWrapper.beanname}Serv;
+import java.util.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
+
+@Controller
+public class ${tableWrapper.beanname}ControllerEx extends ControllerAdapter {
+
+@RequestMapping("/${tableWrapper.instancename}new")
+public ModelAndView ${tableWrapper.instancename}new(HttpServletRequest request){
+ModelAndView view=new ModelAndView("${tableWrapper.instancename}new/${tableWrapper.instancename}new.html");
+String method = request.getMethod();
+if(method.equalsIgnoreCase("GET")) {
+//List<Group> groups = GroupServ.n().findAll();
+    //  setAttr("groups",groups);
+    //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+        //System.out.println("manus size:"+manus.size());
+        //setAttr("manus",manus);
+        //render("${tableWrapper.instancename}new.html");
+        }else if(method.equalsIgnoreCase("POST")){
+        //User user = getUserFromRequest(request);
+        ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest(request);
+        //int r = UserServ.n().saveAutoId(user);
+        int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+        if(r>0){
+        view.setViewName("redirect:/admin/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        //redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        }else {
+        System.out.println("新增失败");
+        }
+        }
+        return view;
+        }
+
+        @RequestMapping("/${tableWrapper.instancename}edit")
+        public ModelAndView ${tableWrapper.instancename}edit(HttpServletRequest request){
+        ModelAndView view=new ModelAndView("${tableWrapper.instancename}new/${tableWrapper.instancename}edit.html");
+        String method = request.getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                //System.out.println("group size:"+groups.size());
+                //int userID= getIntPara(request,"userId", 1);
+                int ${tableWrapper.keynameHump} = getIntPara(request,"${tableWrapper.keynameHump}",1);
+                if(${tableWrapper.keynameHump}==0) {
+                System.out.println("出错");
+                return null;
+                }
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get(${tableWrapper.keynameHump});
+                //setAttr("groups",groups);
+                //setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                view.addObject("${tableWrapper.instancename}",${tableWrapper.instancename});
+                //render("${tableWrapper.instancename}edit.html");
+
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit(request);
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return null;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.update(${tableWrapper.instancename});
+                if(r>0){
+                    view.addObject("redirect:/admin/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                    //redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                }
+                else {
+                System.out.println("出错");
+                }
+                }
+                return view;
+                }
+
+
+
+                //controller list方法，放在controller里面
+                @RequestMapping("/${tableWrapper.instancename}list")
+                public ModelAndView ${tableWrapper.instancename}list(HttpServletRequest request){
+                ModelAndView view=new ModelAndView("${tableWrapper.instancename}new/${tableWrapper.instancename}list.html");
+                int pageNo = getIntPara(request,"pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                //setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                view.addObject("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}list?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl,view);
+                //view.setViewName("${tableWrapper.instancename}list.html");
+                //render("${tableWrapper.instancename}list.html");
+                return view;
+                }
+
+
+                //controller partpage，放在controller里面
+                @RequestMapping("/${tableWrapper.instancename}PartPage")
+                public ModelAndView ${tableWrapper.instancename}PartPage(HttpServletRequest request){
+                ModelAndView view=new ModelAndView("${tableWrapper.instancename}new/${tableWrapper.instancename}list.html");
+                int pageNo = getIntPara(request,"pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                //setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                view.addObject("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}list?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl,view);
+                //view.setViewName("${tableWrapper.instancename}list.html");
+                //render("${tableWrapper.instancename}PartPage.html");
+                return view;
+                }
+
+                //放在controller delete方法
+                @RequestMapping("/${tableWrapper.instancename}del")
+                public ModelAndView ${tableWrapper.instancename}del(HttpServletRequest request){
+                ModelAndView view=new ModelAndView();
+                //int departID = getIntPara("departID",0);
+                int ${tableWrapper.keynameHump} = getParaToInt(request,"${tableWrapper.keynameHump}");
+                //int ${tableWrapper.keynameHump}  = getParaToInt("${tableWrapper.keynameHump}");
+                if(${tableWrapper.keynameHump}==0)  return null;
+                int r = ${tableWrapper.beanname}Serv.n().delete(${tableWrapper.keynameHump});
+                if(r>0) {
+                view.setViewName("redirect:/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}list");
+                //redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}list");
+                }
+                return view;
+                }
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequest(HttpServletRequest request){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                ##$f.iskey 主键
+                    #if($f.iskey=="PRI")
+                    #else
+                        #if($f.javatype=="int")
+                            int ${f.fieldname}=getIntPara(request,"${f.fieldname}",0);
+                        #elseif($f.javatype=="String")
+                            String ${f.fieldname} = getStrPara(request,"${f.fieldname}","");
+                        #elseif($f.javatype=="long")
+                            long ${f.fieldname}=System.currentTimeMillis();
+                        #elseif($f.javatype=="Timestamp")
+                            Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+                        #end
+                        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                    #end
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequestEdit(HttpServletRequest request){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                    #if($f.javatype=="int")
+                        int ${f.fieldname}=getIntPara(request,"${f.fieldname}",0);
+                    #elseif($f.javatype=="String")
+                        String ${f.fieldname} = getStrPara(request,"${f.fieldname}","");
+                    #elseif($f.javatype=="long")
+                        long ${f.fieldname}=System.currentTimeMillis();
+                    #elseif($f.javatype=="Timestamp")
+                        Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+                    #end
+                    ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+
+                }
+

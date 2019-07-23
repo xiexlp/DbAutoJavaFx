@@ -1,0 +1,45 @@
+public void ${tableWrapper.instancename}${fieldnameConcat}Update(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+                int ${tableWrapper.keynameHump} = getIntPara("${tableWrapper.keynameHump}",1);
+                if(${tableWrapper.keynameHump}==0) {
+                System.out.println("出错");
+                return;
+                }
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get(${tableWrapper.keynameHump});
+                setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach($f in $keylist)
+                    int ${f.fieldname} = getIntPara("${f.fieldname}",0);
+                    if(${f.fieldname}==0) {
+                    System.out.println("id不能为0");
+                    return;
+                    }
+                #end
+                #foreach( $f in $selectFieldList )
+                ##private $f.javatype $f.fieldname;
+                    #if($f.bFieldWrapper.javatype=="int")
+                        int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+                    #elseif($f.bFieldWrapper.javatype=="long"&&${f.fieldname}!="updateTime")
+                        long ${f.fieldname}=getLongPara("${f.fieldname}",0);
+                    #elseif($f.bFieldWrapper.javatype=="String")
+                        String ${f.fieldname} = getStrPara("${f.fieldname}","");
+                    #elseif($f.bFieldWrapper.javatype=="Double"||$f.bFieldWrapper.javatype=="double")
+                        Double ${f.fieldname} = getDoublePara("${f.fieldname}",0);
+                    #elseif($f.bFieldWrapper.javatype=="long"&&${f.fieldname}=="updateTime")
+                        long ${f.fieldname}=${tableWrapper.instancename}.set${f.bFieldWrapper.Capitalname}(System.currentTimeMillis());
+                    #elseif($f.bFieldWrapper.javatype=="Timestamp")
+                        Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+                    #end
+                    ${tableWrapper.instancename}.set${f.bFieldWrapper.Capitalname}(${f.fieldname});
+                #end
+                ${tableWrapper.beanname}ServUpdate ${tableWrapper.instancename}ServUpdate = ${tableWrapper.beanname}ServUpdate.n();
+                int r=0;
+                r=${tableWrapper.instancename}ServUpdate.update${fieldnameConcat}By${tableWrapper.keynameHumpCapital}(${nameNoTypeConcat},${tableWrapper.keynameHump});
+                if(r>0) redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}PartUpdate");
+                else {
+                System.out.println("出错");
+                }
+                }
+                }

@@ -1,0 +1,21 @@
+me.add("/${tableWrapper.relativePath}/${tableWrapper.instancename}",${tableWrapper.packagenameCurrent}.controller.${tableWrapper.beanname}Controller.class,"/${tableWrapper.relativePath}/${tableWrapper.instancename}");
+
+<li class="list-group-item"><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s">${tableWrapper.instancename}管理列表</a></li>
+
+
+<a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}new">${tableWrapper.instancename}new</a>
+<a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}edit">${tableWrapper.instancename}edit</a>
+<a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}list">${tableWrapper.instancename}list</a>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}PartPage" target="newframe">${tableWrapper.instancename}PartPage</a></li>
+
+
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}new" target="newframe">${tableWrapper.instancename}new</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}edit" target="newframe">${tableWrapper.instancename}edit</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}list" target="newframe">${tableWrapper.instancename}list</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}PartPage" target="newframe">${tableWrapper.instancename}PartPage</a></li>
+
+
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}add" target="newframe">${tableWrapper.instancename}add</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}update" target="newframe">${tableWrapper.instancename}update</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s" target="newframe">${tableWrapper.instancename}s</a></li>
+<li><a href="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}PartPage" target="newframe">${tableWrapper.instancename}PartPage</a></li>

@@ -1,0 +1,42 @@
+//server no bean
+public int inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithType},${codeConcat.conditionConcatWithType}){
+return ${tableWrapper.instancename}Dao.inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithComma},${codeConcat.conditionConcatWithComma});
+}
+
+//--
+
+//server ex no bean
+public int inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithType},${codeConcat.conditionConcatWithType}){
+return ${tableWrapper.instancename}DaoEx.inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithComma},${codeConcat.conditionConcatWithComma});
+}
+
+//--
+
+//dao no bean
+public int inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithType},${codeConcat.conditionConcatWithType});
+
+
+//--
+
+//daoimpl no bean
+public int inc${codeConcat.fieldConcat}By${codeConcat.conditionConcat}(${codeConcat.fieldConcatWithType},${codeConcat.conditionConcatWithType}){
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+String sql = "${inc_sql}";
+try {
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${inc_set}
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+}
+return result;
+}
+
+

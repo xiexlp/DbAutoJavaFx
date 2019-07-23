@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="commons-lang-2.6">
+    <CLASSES>
+      <root url="jar://F:/1java/apache/commons-lang-2.6/commons-lang-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://F:/1java/apache/commons-lang-2.6/commons-lang-2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

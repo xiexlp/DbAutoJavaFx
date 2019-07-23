@@ -1,0 +1,10 @@
+//放在controller delete方法
+public void ${tableWrapper.instancename}del(){
+//int departID = getIntPara("departID",0);
+int ${tableWrapper.keynameHump}  = getParaToInt("${tableWrapper.keynameHump}");
+if(${tableWrapper.keynameHump}==0)  return;
+int r = ${tableWrapper.beanname}Serv.n().delete(${tableWrapper.keynameHump});
+if(r>0) redirect("/admin/${tableWrapper.instancename}/${tableWrapper.instancename}list");
+}
+
+

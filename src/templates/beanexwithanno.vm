@@ -1,0 +1,68 @@
+package ${tableWrapper.packagename}.ormex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.js.common.anno.AutoIncrement;
+import com.js.common.anno.PrimaryKey;
+import com.js.common.anno.TableField;
+import com.js.common.anno.TableFieldType;
+
+public class ${tableWrapper.beanname}Ex{
+
+#foreach( $f in $list )
+
+##key:$f.iskey
+##sqltype:$f.sqlType
+##size:$f.sqlSize
+##extra:$f.extra
+#if($f.iskey=="PRI")
+@PrimaryKey
+#end
+#if($f.extra=="auto_increment")
+@AutoIncrement
+#end
+@TableFieldType(fieldType = TableFieldType.TYPE.$f.sqlTypeUpper)
+#if($f.sqlSize)
+    #if($f.pointSize)
+    @TableField(len = $f.sqlSize,pointLen= $f.pointSize)
+    #else
+    @TableField(len = $f.sqlSize)
+    #end
+#end
+private $f.javatype $f.fieldname;
+
+#end
+
+Map<String,Object> map=null;
+
+public ${tableWrapper.beanname}Ex(){}
+
+#foreach( $f in $list )
+public $f.javatype get${f.Capitalname}(){
+return $f.fieldname;
+}
+
+public void set${f.Capitalname}($f.javatype $f.fieldname){
+this.$f.fieldname = $f.fieldname;
+}
+#end
+
+public Map toMap(){
+if(map==null){
+    map = new HashMap();
+    #foreach( $f in $list )
+    map.put("${f.tableFieldName}",this.get${f.Capitalname}());
+    #end
+}
+return map;
+}
+
+
+}

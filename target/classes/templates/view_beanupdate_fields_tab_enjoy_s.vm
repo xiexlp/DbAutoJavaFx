@@ -1,0 +1,57 @@
+// \#include("/${tableWrapper.relativePath}/common/${tableWrapper.relativePath}_layout.html") #@${tableWrapper.relativePath}_layout()
+// \#define content()
+
+\#include("/boot/common/boot_nav.html")
+
+<div class="container">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        ${tableWrapper.instancename}update 更新
+    </div>
+    <div class="panel-body">
+
+
+        <div class="container">
+            <ul class="nav nav-tabs">
+                #foreach($form in $formCodeList)
+                    #if($form.contentId=="A")
+                        <li class="active"><a href="#$form.contentId" data-toggle="tab">$form.tabTitle</a></li>
+                    #else
+                        <li><a href="#$form.contentId" data-toggle="tab">$form.tabTitle</a></li>
+                    #end
+                #end
+
+
+            </ul>
+            <br/>
+            <div class="tab-content">
+
+                #foreach($form in $formCodeList)
+                    #if($form.contentId=="A")
+                        <div class="tab-pane active" id="$form.contentId">
+                            $form.formContent
+                    </div>
+                    #else
+                        <div class="tab-pane" id="$form.contentId">
+                            $form.formContent
+                        </div>
+                    #end
+                #end
+
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        panel-footer
+    </div>
+</div>
+</div>
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/jquery.validate.js"></script>
+<!--<script src="/jslib/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>-->
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script src="/${tableWrapper.relativePath}/jslib/validator-orm/${tableWrapper.instancename}AddEditValidator.js"></script>
+// \#end
+
+
+
+

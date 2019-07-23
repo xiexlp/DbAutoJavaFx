@@ -1,0 +1,21 @@
+public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequest(){
+${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+#foreach( $f in $list )
+##private $f.javatype $f.fieldname;
+    ##$f.iskey 主键
+    #if($f.iskey=="PRI")
+    #else
+        #if($f.javatype=="int")
+        int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+        #elseif($f.javatype=="String")
+        String ${f.fieldname} = getStrPara("${f.fieldname}","");
+        #elseif($f.javatype=="long")
+        long ${f.fieldname}=System.currentTimeMillis();
+        #end
+        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+    #end
+#end
+    return ${tableWrapper.instancename};
+}
+
+

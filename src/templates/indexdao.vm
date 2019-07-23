@@ -1,0 +1,107 @@
+package com.js.cluster.elastic;
+
+
+import com.js.cluster.elastic.orm.Topic;
+import org.elasticsearch.client.transport.TransportClient;
+
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.List;
+
+/**
+* Created by bee on 17/8/11.
+*/
+public class ${tableWrapper.beanname}ElasticDao {
+
+private Connection conn;
+
+//private static final String URL="jdbc:mysql://localhost:3306/ishop?useUnicode=true&amp;characterEncoding=utf8";
+private static final String URL="jdbc:mysql://localhost:"+Config.PORT+"/"+Config.DBNAME+"?useUnicode=true&amp;characterEncoding=utf8";
+private static final String NAME="root";
+private static final String PASSWORD="";
+
+
+public void getConnection(){
+try {
+//Class.forName("com.mysql.cj.jdbc.Driver");
+//String user="root";
+//String passwd="";
+String url="jdbc:mysql://localhost:3306/"+Config.DBNAME;
+Class.forName("com.mysql.jdbc.Driver");
+conn= DriverManager.getConnection(URL,NAME,PASSWORD);
+
+if (conn!=null){
+System.out.println("mysql连接成功!");
+}else{
+System.out.println("mysql连接失败!");
+}
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+} catch (SQLException e) {
+e.printStackTrace();
+}
+}
+
+public void mysqlTopicToEs(String tablename){
+TransportClient client= EsUtils.getSingleClient();
+try {
+Map<String,Object> map=new HashMap<String, Object>();
+List<${tableWrapper.beanname}> list = findAll();
+for(${tableWrapper.beanname} ${tableWrapper.instancename}:list){
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+map = ${tableWrapper.instancename}.toMap();
+System.out.println(map);
+client.prepareIndex(Config.INDEX_NAME,tablename,String.valueOf(${tableWrapper.instancename}.get${tableWrapper.beanname}Id()))
+.setSource(map)
+.execute()
+.actionGet();
+}
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+
+
+public List<${tableWrapper.beanname}> findAll() {
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+List<${tableWrapper.beanname}> list = new ArrayList();
+try {
+//p = DbHotel.get${tableWrapper.Cdatabasename}Connection().prepareStatement("${sqlParam.selectall_sql}");
+conn =HikariDb.getConnection();
+p=conn.prepareStatement("${sqlParam.selectall_sql}");
+r = p.executeQuery();
+while (r.next()) {
+${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+setFindParamNo(r, ${tableWrapper.instancename});
+list.add(${tableWrapper.instancename});
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+//DbHotel.close${tableWrapper.Cdatabasename}Connection();
+}
+return list;
+}
+
+
+${sqlParam.select_param_no}
+
+
+public static void main(String[] args) {
+//将信息导入到elastic
+${tableWrapper.beanname}ElasticDao dao = new ${tableWrapper.beanname}ElasticDao();
+dao.getConnection();
+
+//Connection connection =dao.getConnection();
+dao.mysql${tableWrapper.beanname}ToEs("${tableWrapper.tablename}");
+
+
+}
+}

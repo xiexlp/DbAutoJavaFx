@@ -1,0 +1,37 @@
+package ${tableWrapper.packagename}.servread;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.daoimpl.${tableWrapper.beanname}Daoimpl;
+import ${tableWrapper.packagename}.dao.${tableWrapper.beanname}Dao;
+import ${tableWrapper.packagename}.servex.${tableWrapper.beanname}ServEx;
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+
+public class ${tableWrapper.beanname}ServRead extends ${tableWrapper.beanname}ServEx{
+
+private ${tableWrapper.beanname}Dao ${tableWrapper.instancename}Dao;
+
+private static ${tableWrapper.beanname}ServRead ${tableWrapper.instancename}ServRead= new ${tableWrapper.beanname}ServRead();
+
+public ${tableWrapper.beanname}ServRead(){
+this.${tableWrapper.instancename}Dao =new ${tableWrapper.beanname}Daoimpl();
+}
+
+public static ${tableWrapper.beanname}ServRead n(){
+    if(${tableWrapper.instancename}ServRead!=null) return ${tableWrapper.instancename}ServRead;
+    else {
+    ${tableWrapper.instancename}ServRead = new ${tableWrapper.beanname}ServRead();
+    }
+    return ${tableWrapper.instancename}ServRead;
+}
+
+public static ${tableWrapper.beanname}ServRead newInstance(){
+    return new ${tableWrapper.beanname}ServRead();
+}
+
+}

@@ -1,0 +1,52 @@
+//server no bean
+public int inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithType},int num){
+return ${tableWrapper.instancename}Dao.inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithComma},num);
+}
+
+//--
+
+//server no bean
+public int inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithType},int num){
+return ${tableWrapper.instancename}DaoEx.inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithComma},num);
+}
+
+//--
+
+//dao no bean
+public int inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithType},int num);
+
+
+//--
+
+//daoimpl no bean
+public int inc${codeConcat.fieldConcat}(${codeConcat.keyConcatWithType},int num){
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+String sql = "${sqlAndParam.inc_field_sql}";
+try {
+// p = DbHotel.getJshopConnection().prepareStatement(sql);
+//p = DbHotel.getConnectionByName(dbname).prepareStatement(sql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${sqlAndParam.inc_field_param_no_bean}
+//p.setString(1,spec.getSpecName());
+//p.setObject(2,spec.getSpecTypeID());
+//p.setString(3,spec.getTypeName());
+//p.setString(4,spec.getBrief());
+//p.setInt(5,spec.getSpecID());
+
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.closeJshopConnection();
+//DbHotel.closeConnectionByName(dbname);
+}
+return result;
+}
+
+

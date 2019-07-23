@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.js.validate.ValidateAppController">
+   <children>
+      <TextField fx:id="textField" layoutX="14.0" layoutY="29.0" prefHeight="23.0" prefWidth="201.0" />
+      <TextArea fx:id="textArea" layoutX="14.0" layoutY="173.0" prefHeight="200.0" prefWidth="520.0" />
+      <Button layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateEmail" text="邮箱" />
+      <Button layoutX="60.0" layoutY="71.0" mnemonicParsing="false" onAction="#validatePhone" text="手机" />
+      <Button layoutX="115.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateName" text="用户名" />
+      <Button layoutX="180.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateInteger" text="整数" />
+      <Button layoutX="232.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateDecimal" text="数" />
+      <Button layoutX="233.0" layoutY="29.0" mnemonicParsing="false" onAction="#createRandom" text="随机生成" />
+      <TextField fx:id="minLen" layoutX="60.0" layoutY="113.0" prefHeight="23.0" prefWidth="112.0" />
+      <Label layoutX="19.0" layoutY="117.0" text="最短" />
+      <Label layoutX="217.0" layoutY="117.0" text="最长" />
+      <TextField fx:id="maxLen" layoutX="260.0" layoutY="113.0" prefHeight="23.0" prefWidth="101.0" />
+      <Button layoutX="273.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateNotNull" text="字符串非空" />
+      <Button layoutX="361.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateLen" text="字符串长度" />
+      <TextField fx:id="len" layoutX="412.0" layoutY="29.0" />
+      <Label layoutX="361.0" layoutY="33.0" text="长度" />
+      <Button layoutX="448.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateMinLen" text="最小长度" />
+      <Button layoutX="523.0" layoutY="71.0" mnemonicParsing="false" onAction="#validateMaxLen" text="最大长度" />
+   </children>
+</AnchorPane>

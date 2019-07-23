@@ -1,0 +1,255 @@
+package ${tableWrapper.packagenameCurrent}.controllerex;
+
+import com.js.common.util.ControllerAdaper;
+import com.js.common.util.PageList;
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.serv.${tableWrapper.beanname}Serv;
+import java.util.List;
+import java.sql.Timestamp;
+import java.sql.Date;
+
+public class ${tableWrapper.beanname}ControllerEx extends ControllerAdaper {
+
+
+public void ${tableWrapper.instancename}new(){
+String method = getRequest().getMethod();
+if(method.equalsIgnoreCase("GET")) {
+//List<Group> groups = GroupServ.n().findAll();
+    //  setAttr("groups",groups);
+    //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+        //System.out.println("manus size:"+manus.size());
+        //setAttr("manus",manus);
+        //render("${tableWrapper.instancename}new.html");
+        }else if(method.equalsIgnoreCase("POST")){
+        //User user = getUserFromRequest();
+        ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest();
+        //int r = UserServ.n().saveAutoId(user);
+
+        #if($tableWrapper.keySize==1)
+            int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+        #else
+            int r=${tableWrapper.beanname}Serv.n().save(${tableWrapper.instancename});
+        #end
+
+
+        if(r>0){
+        redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+        }else {
+        System.out.println("新增失败");
+        }
+        }
+        }
+
+
+        public void ${tableWrapper.instancename}PartAdd(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Group> groups = GroupServ.n().findAll();
+            //  setAttr("groups",groups);
+            //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+                //System.out.println("manus size:"+manus.size());
+                //setAttr("manus",manus);
+                //render("${tableWrapper.instancename}new.html");
+                }else if(method.equalsIgnoreCase("POST")){
+                //User user = getUserFromRequest();
+                ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest();
+                //int r = UserServ.n().saveAutoId(user);
+
+                #if($tableWrapper.keySize==1)
+                    int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+                #else
+                    int r=${tableWrapper.beanname}Serv.n().save(${tableWrapper.instancename});
+                #end
+
+
+                if(r>0){
+                redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                }else {
+                System.out.println("新增失败");
+                }
+                }
+                }
+
+
+        public void ${tableWrapper.instancename}edit(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                //System.out.println("group size:"+groups.size());
+                //int userID= getIntPara("userID", 1);
+                #foreach($f in $tableWrapper.bKeyFieldWrapperList)
+                    int ${f.fieldname} = getIntPara("${f.fieldname}",1);
+                    if(${f.fieldname}==0) {
+                    System.out.println("出错");
+                    return;
+                    }
+                #end
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get($sqlParam.key_argumentNoType);
+                //setAttr("groups",groups);
+                setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                //render("${tableWrapper.instancename}edit.html");
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit();
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.update(${tableWrapper.instancename});
+                if(r>0) redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                else {
+                System.out.println("出错");
+                }
+                }
+                }
+
+
+
+                public void ${tableWrapper.instancename}PartUpdate(){
+                String method = getRequest().getMethod();
+                if(method.equalsIgnoreCase("GET")) {
+                        #foreach($f in $tableWrapper.bKeyFieldWrapperList)
+                            int ${f.fieldname} = getIntPara("${f.fieldname}",1);
+                            if(${f.fieldname}==0) {
+                            System.out.println("出错");
+                            return;
+                            }
+                        #end
+                        ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get($sqlParam.key_argumentNoType);
+                        setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+                        }else if(method.equalsIgnoreCase("POST")){
+                        ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit();
+                        if(${tableWrapper.instancename}==null) {
+                        System.out.println("id不存在");
+                        return;
+                        }
+                        ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                        int r=0;
+                        r=${tableWrapper.instancename}Serv.update(${tableWrapper.instancename});
+                        if(r>0) redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                        else {
+                        System.out.println("出错");
+                        }
+                        }
+                        }
+
+
+                //controller list方法，放在controller里面
+                public void ${tableWrapper.instancename}list(){
+                int pageNo = getIntPara("pageNo",1);
+                PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+                setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+                String actionUrl = "${tableWrapper.instancename}list?1=1";
+                setPageInfo(${tableWrapper.instancename}list, actionUrl);
+                //render("${tableWrapper.instancename}list.html");
+                }
+
+
+                        //controller list方法，放在controller里面
+                        public void ${tableWrapper.instancename}PartPage() {
+                        int pageNo = getIntPara("pageNo", 1);
+                        String sortBy = getStrPara("sortBy","");
+                        int sort = getIntPara("sort",0);
+                        int pageSize = getIntPara("pageSize",100);
+                        //PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo, 21);
+
+                           // CurrencyStatus currencyStatus = CurrencyStatusServ.n().get(1);
+                           // long priceBatchTime = currencyStatus.getPriceLastBatchTime();
+                          //  int panelNum = currencyStatus.getPricePanelNum();
+                            long total= 201;
+
+                            PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,(int)total);
+                               // String priceBatchTimeFormat = TimeUtil.getTimeFormat(priceBatchTime,TimeUtil.DATE_FORMAT);
+                                //setAttr("priceBatchTimeFormat", priceBatchTimeFormat);
+                                setAttr("total", total);
+                                setAttr("sortBy",sortBy);
+                                setAttr("sort",sort);
+                                setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+                                System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+                                String actionUrl = "${tableWrapper.instancename}PartPage?1=1";
+                                setPageInfo(${tableWrapper.instancename}list, actionUrl);
+                                //render("currencyPrices.html");
+                                }
+
+
+
+                //放在controller delete方法
+                public void ${tableWrapper.instancename}del(){
+                //int departID = getIntPara("departID",0);
+
+                #foreach($f in $tableWrapper.bKeyFieldWrapperList)
+                    int ${f.fieldname} = getIntPara("${f.fieldname}",1);
+                    if(${f.fieldname}==0) {
+                    System.out.println("出错");
+                    return;
+                    }
+                #end
+
+
+                int r = ${tableWrapper.beanname}Serv.n().delete($sqlParam.key_argumentNoType);
+                if(r>0) redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}list");
+                }
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequest(){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                ##$f.iskey 主键
+                    #if($f.iskey=="PRI")
+                    #else
+                        #if($f.javatype=="int")
+                            int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+                        #elseif($f.javatype=="String")
+                            String ${f.fieldname} = getStrPara("${f.fieldname}","");
+                        #elseif($f.javatype=="long"&&($f.fieldname!="createTime"||$f.fieldname!="updateTime"))
+                            long ${f.fieldname}=getLongPara("${f.fieldname}",0);
+                        #elseif($f.javatype=="long"&&$f.fieldname=="createTime")
+                            long ${f.fieldname}=System.currentTimeMillis();
+                        #elseif($f.javatype=="long"&&$f.fieldname=="updateTime")
+                            long ${f.fieldname}=System.currentTimeMillis();
+                        #elseif($f.javatype=="Double"||$f.javatype=="double")
+                            double ${f.fieldname} = getDoublePara("${f.fieldname}",0);
+                        #elseif($f.javatype=="Timestamp")
+                            Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+                        #elseif($f.javatype=="Date")
+                            Date  ${f.fieldname} = getDatePara("${f.fieldname}");
+                        #end
+                        ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                    #end
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+
+                public ${tableWrapper.beanname} get${tableWrapper.beanname}FromRequestEdit(){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+                #foreach( $f in $list )
+                ##private $f.javatype $f.fieldname;
+                    #if($f.javatype=="int")
+                        int ${f.fieldname}=getIntPara("${f.fieldname}",0);
+                    #elseif($f.javatype=="String")
+                        String ${f.fieldname} = getStrPara("${f.fieldname}","");
+                    #elseif($f.javatype=="Double"||$f.javatype=="double")
+                        double ${f.fieldname} = getDoublePara("${f.fieldname}",0);
+                    #elseif($f.javatype=="long"&&($f.fieldname!="createTime"||$f.fieldname!="updateTime"))
+                        long ${f.fieldname}=getLongPara("${f.fieldname}",0);
+                    #elseif($f.javatype=="long"&&$f.fieldname=="createTime")
+                        long ${f.fieldname}=System.currentTimeMillis();
+                    #elseif($f.javatype=="long"&&$f.fieldname=="updateTime")
+                        long ${f.fieldname}=System.currentTimeMillis();
+                    #elseif($f.javatype=="Timestamp")
+                        Timestamp  ${f.fieldname} = getTimestampPara("${f.fieldname}");
+                    #elseif($f.javatype=="Date")
+                        Date  ${f.fieldname} = getDatePara("${f.fieldname}");
+                    #end
+                    ${tableWrapper.instancename}.set${f.Capitalname}(${f.fieldname});
+                #end
+                return ${tableWrapper.instancename};
+                }
+
+                }
+

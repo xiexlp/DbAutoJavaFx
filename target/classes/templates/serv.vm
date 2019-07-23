@@ -1,0 +1,38 @@
+package ${tableWrapper.packagename}.serv;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.daoimpl.${tableWrapper.beanname}Daoimpl;
+import ${tableWrapper.packagename}.dao.${tableWrapper.beanname}Dao;
+import ${tableWrapper.packagename}.servex.${tableWrapper.beanname}ServEx;
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+
+public class ${tableWrapper.beanname}Serv extends ${tableWrapper.beanname}ServEx{
+
+private ${tableWrapper.beanname}Dao ${tableWrapper.instancename}Dao;
+private static ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv;
+
+public ${tableWrapper.beanname}Serv(){
+this.${tableWrapper.instancename}Dao =new ${tableWrapper.beanname}Daoimpl();
+}
+
+public static ${tableWrapper.beanname}Serv newInstance(){
+${tableWrapper.instancename}Serv =new ${tableWrapper.beanname}Serv();
+return ${tableWrapper.instancename}Serv;
+}
+
+
+public static ${tableWrapper.beanname}Serv n(){
+
+    if(${tableWrapper.instancename}Serv==null){
+        return new ${tableWrapper.beanname}Serv();
+    }else return ${tableWrapper.instancename}Serv;
+
+}
+
+}

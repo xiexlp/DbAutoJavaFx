@@ -1,0 +1,16 @@
+package ${tableWrapper.packagename}.config;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import java.sql.Timestamp;
+import ${tableWrapper.packagename}.configex.${tableWrapper.beanname}ConfigEx;
+
+public class ${tableWrapper.beanname}Config extends ${tableWrapper.beanname}ConfigEx{
+
+
+
+
+}

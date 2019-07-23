@@ -1,0 +1,28 @@
+//controller list方法，放在controller里面
+public void ${tableWrapper.instancename}list(){
+        int pageNo = getIntPara("pageNo",1);
+        PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+            setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+            System.out.println("list size:" + ${tableWrapper.instancename}list.size());
+            String actionUrl = "${tableWrapper.instancename}list?1=1";
+            setPageInfo(${tableWrapper.instancename}list, actionUrl);
+            render("${tableWrapper.instancename}list.html");
+            }
+
+ //controller list方法，放在controller里面
+ public void ${tableWrapper.instancename}s(){
+        int pageNo = getIntPara("pageNo",1);
+        PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+            setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+            System.out.println("list size:"+${tableWrapper.instancename}list.size());
+            String actionUrl = "${tableWrapper.instancename}s?1=1";
+            setPageInfo(${tableWrapper.instancename}list, actionUrl);
+            render("${tableWrapper.instancename}s.html");
+            }
+
+
+
+List<${tableWrapper.beanname}> ${tableWrapper.instancename}List = ${tableWrapper.beanname}Serv.n().findAll();
+setAttr("${tableWrapper.instancename}List", ${tableWrapper.instancename}List);
+
+

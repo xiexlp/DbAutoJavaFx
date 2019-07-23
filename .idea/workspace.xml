@@ -1,0 +1,1761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/js/code/Main.java" line="10" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/js/code/Main.java" line="14" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/js/code/Main.java" line="12" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/js/code/Main.java" line="15" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/js/code/Main.java" line="6" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/MathIntestJavaFx/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyMutable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyMutableEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MathIntestJavaFx/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MathIntestJavaFx/src/main/java/com/js/math/IntestApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDetailEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1675">
+              <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDexEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPosScrawLog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPosScrawLogEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyStatusEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPriceEx.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1750">
+              <caret line="73" column="28" selection-start-line="67" selection-start-column="3" selection-end-line="73" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="JavaFXApplication" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>doCreateUpdateSelectFieldCode</find>
+      <find>doGenCreateUpdateSelectFieldNoBeanCode</find>
+      <find>doCreateUpdateSelectFieldCodeNoBean</find>
+      <find>doCreateIncCondtionCodeNoBean</find>
+      <find>doCreateDeleteSelectFieldCodeNoBean</find>
+      <find>doCreateListFieldsCode</find>
+      <find>doCreateListFieldsControllerCode</find>
+      <find>doCreateUpdateCondtionCodeNoBean</find>
+      <find>inited field name:</find>
+      <find>doCreateUpdateFieldsCode</find>
+      <find>doCreateUpdateFieldsControllerCode</find>
+      <find>doCreateUpdateFieldsServCode</find>
+      <find>选择了的</find>
+      <find>doAddTabUpdateServCode</find>
+      <find>doAddTabUpdateFileViewCode</find>
+      <find>java type3333:</find>
+      <find>role</find>
+      <find>viewlisttable</find>
+      <find>Read</find>
+      <find>doCreateUpdateFieldsCodeFile</find>
+      <find>doCreateBeanUpdateTabViewCodeFileByList</find>
+      <find>doCreateSelectFieldComplexCodeNoBean</find>
+      <find>doCreateSelectFieldComplexCodeNoBeanNoReplace</find>
+      <find>更新</find>
+      <find>表格创建</find>
+      <find>beanNameTextField</find>
+      <find>Server</find>
+      <find>创建</find>
+      <find>部分</find>
+      <find>doCreateListFieldsFileCode</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>setViewName</replace>
+      <replace>col-lg-6</replace>
+      <replace>Action</replace>
+    </replaceStrings>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/orm/UserLoginLog.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/AdminEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/MemberEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/code/Config.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/orm/Market.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/MarketEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/orm/MarketCurrency.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/CurrencyEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/serv.vm" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/MarketCurrencyEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/servupdate.vm" />
+        <option value="$PROJECT_DIR$/src/com/js/fxtest/updatefieldsdialog.fxml" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/TradeEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/CurrencyUserEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/view_beanupdate_enjoy.vm" />
+        <option value="$PROJECT_DIR$/src/com/js/common/anno/PartField.java" />
+        <option value="$PROJECT_DIR$/src/com/js/dbauto/BField.java" />
+        <option value="$PROJECT_DIR$/src/com/js/bean/relations/FieldWrapper.java" />
+        <option value="$PROJECT_DIR$/src/com/js/dbauto/BFieldWrapper.java" />
+        <option value="$PROJECT_DIR$/src/com/js/dbauto/StringUtil.java" />
+        <option value="$PROJECT_DIR$/src/templates/view_s_enjoy.vm" />
+        <option value="$PROJECT_DIR$/src/com/js/code/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/itransaction/ormex/OrdersEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/route_href" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ishop/ormex/OrderOptionValueEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ishop/orm/OrderOptionValue.java" />
+        <option value="$PROJECT_DIR$/src/com/js/bean/relations/BeanRelationUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/js/dbauto/StringTool.java" />
+        <option value="$PROJECT_DIR$/src/com/js/code/Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDexEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPrice.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyDex.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPos.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyStatus.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyStatusEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPosScrawLog.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPosScrawLogEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPriceEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/view_part_s_enjoy.vm" />
+        <option value="$PROJECT_DIR$/src/templates/daoimplex.vm" />
+        <option value="$PROJECT_DIR$/src/templates/daoex.vm" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyInfoEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPosEx.java" />
+        <option value="$PROJECT_DIR$/src/templates/controllerex" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyDetail.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/orm/CurrencyMutable.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyMutableEX.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyMutableEx.java" />
+        <option value="$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDetailEx.java" />
+        <option value="$PROJECT_DIR$/MathIntestJavaFx/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="1620" />
+    <option name="height" value="920" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DbAutoJavaFx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DbAutoJavaFx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DbAutoJavaFx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DbAutoJavaFx" type="462c0819:PsiDirectoryNode" />
+              <item name="MathIntestJavaFx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DbAutoJavaFx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DbAutoJavaFx" type="462c0819:PsiDirectoryNode" />
+              <item name="MathIntestJavaFx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DbAutoJavaFx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DbAutoJavaFx" type="462c0819:PsiDirectoryNode" />
+              <item name="MathIntestJavaFx" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DbAutoJavaFx" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DbAutoJavaFx" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="DbAutoJavaFx" type="58d84e3e:PackageViewProjectNode" />
+              <item name="DbAutoJavaFx" type="616d4139:PackageViewModuleNode" />
+              <item name="com.js" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DbAutoJavaFx" type="58d84e3e:PackageViewProjectNode" />
+              <item name="MathIntestJavaFx" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/MathIntestJavaFx/src/main/java/com/js/math" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/templates" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.js.cms.ormex" />
+      <recent name="com.js.cms.orm" />
+      <recent name="com.js.cms.ishop.ormex" />
+      <recent name="com.js.common.anno" />
+      <recent name="com.js.cms.itransaction.orm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java workplace\DbAutoJavaFx\src\templates" />
+      <recent name="F:\java workplace\DbAutoJavaFx" />
+      <recent name="F:\java workplace\DbAutoJavaFx\src\com\js\validate" />
+      <recent name="F:\java workplace\DbAutoJavaFx\src\com\js\fxtest" />
+      <recent name="F:\java workplace\DbAutoJavaFx\src\com\js\dbauto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanRelationUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.js.bean.relations.BeanRelationUtil" />
+      <module name="DbAutoJavaFx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.js.bean.relations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.js.bean.relations.DBUtil" />
+      <module name="DbAutoJavaFx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.js.bean.relations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.js.code.Main" />
+      <module name="DbAutoJavaFx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.js.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="DbAutoJavaFx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.js.code.configs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.js.code.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="DbAutoJavaFx" />
+      <envs />
+    </configuration>
+    <configuration name="StringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.js.dbauto.StringUtil" />
+      <module name="DbAutoJavaFx" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.js.dbauto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.DBUtil" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Test (1)" />
+      <item itemvalue="Application.BeanRelationUtil" />
+      <item itemvalue="Application.StringUtil" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.StringUtil" />
+        <item itemvalue="Application.BeanRelationUtil" />
+        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.DBUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INTERFACES,ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1516504547242" duration="3635000" />
+      <workItem from="1516515472343" duration="9805000" />
+      <workItem from="1516538447841" duration="3984000" />
+      <workItem from="1516584424207" duration="7409000" />
+      <workItem from="1516603345006" duration="6517000" />
+      <workItem from="1516627098621" duration="3037000" />
+      <workItem from="1516676719868" duration="4313000" />
+      <workItem from="1516684323879" duration="7225000" />
+      <workItem from="1516695436225" duration="3585000" />
+      <workItem from="1516710057777" duration="6735000" />
+      <workItem from="1516759184018" duration="8037000" />
+      <workItem from="1516770556586" duration="7974000" />
+      <workItem from="1516780793478" duration="5898000" />
+      <workItem from="1516798240728" duration="4667000" />
+      <workItem from="1516843291641" duration="8882000" />
+      <workItem from="1516864043449" duration="8279000" />
+      <workItem from="1516883478006" duration="3743000" />
+      <workItem from="1516934820120" duration="7022000" />
+      <workItem from="1516950666254" duration="238000" />
+      <workItem from="1516955069468" duration="5436000" />
+      <workItem from="1516960794377" duration="595000" />
+      <workItem from="1517187085806" duration="8435000" />
+      <workItem from="1517213057431" duration="4026000" />
+      <workItem from="1517231793727" duration="613000" />
+      <workItem from="1517368160525" duration="4768000" />
+      <workItem from="1517384779593" duration="5486000" />
+      <workItem from="1517402976616" duration="1200000" />
+      <workItem from="1517447806443" duration="6449000" />
+      <workItem from="1517462411760" duration="10008000" />
+      <workItem from="1517630288537" duration="497000" />
+      <workItem from="1517631068466" duration="6926000" />
+      <workItem from="1518333447749" duration="794000" />
+      <workItem from="1518422049645" duration="650000" />
+      <workItem from="1519818797310" duration="723000" />
+      <workItem from="1519821299023" duration="1167000" />
+      <workItem from="1519869102863" duration="599000" />
+      <workItem from="1519958627898" duration="2417000" />
+      <workItem from="1519972594197" duration="9913000" />
+      <workItem from="1520042736107" duration="9231000" />
+      <workItem from="1520062334054" duration="7197000" />
+      <workItem from="1520081862530" duration="2405000" />
+      <workItem from="1520129883183" duration="7825000" />
+      <workItem from="1520145581014" duration="7557000" />
+      <workItem from="1520169457447" duration="1602000" />
+      <workItem from="1520213125154" duration="5358000" />
+      <workItem from="1520235375406" duration="4676000" />
+      <workItem from="1520254335447" duration="5176000" />
+      <workItem from="1520300223306" duration="1570000" />
+      <workItem from="1520317973148" duration="1240000" />
+      <workItem from="1520321718885" duration="1298000" />
+      <workItem from="1520342000398" duration="598000" />
+      <workItem from="1520383742724" duration="595000" />
+      <workItem from="1520389426788" duration="5713000" />
+      <workItem from="1520407379387" duration="2914000" />
+      <workItem from="1520427008970" duration="1200000" />
+      <workItem from="1520473231286" duration="7718000" />
+      <workItem from="1520491574365" duration="2213000" />
+      <workItem from="1520494707633" duration="5724000" />
+      <workItem from="1520583259940" duration="6632000" />
+      <workItem from="1520600289434" duration="1355000" />
+      <workItem from="1520645371802" duration="3289000" />
+      <workItem from="1520659955394" duration="596000" />
+      <workItem from="1520666389054" duration="5832000" />
+      <workItem from="1520686985015" duration="598000" />
+      <workItem from="1520732735473" duration="2070000" />
+      <workItem from="1520755690868" duration="1972000" />
+      <workItem from="1520815986413" duration="1441000" />
+      <workItem from="1520821114755" duration="161000" />
+      <workItem from="1520823582147" duration="1199000" />
+      <workItem from="1520839835573" duration="4513000" />
+      <workItem from="1520862213878" duration="1080000" />
+      <workItem from="1520902735765" duration="3064000" />
+      <workItem from="1520922802360" duration="778000" />
+      <workItem from="1520927329637" duration="897000" />
+      <workItem from="1520945961633" duration="2431000" />
+      <workItem from="1520992562164" duration="1797000" />
+      <workItem from="1521005160423" duration="634000" />
+      <workItem from="1521006538639" duration="2612000" />
+      <workItem from="1521078572908" duration="1346000" />
+      <workItem from="1521094148145" duration="1667000" />
+      <workItem from="1521120137063" duration="906000" />
+      <workItem from="1521250009964" duration="6009000" />
+      <workItem from="1521354313485" duration="1153000" />
+      <workItem from="1521374648649" duration="1198000" />
+      <workItem from="1521513204745" duration="2537000" />
+      <workItem from="1521523868519" duration="1198000" />
+      <workItem from="1521529943669" duration="6308000" />
+      <workItem from="1521550996302" duration="1899000" />
+      <workItem from="1521596829398" duration="2289000" />
+      <workItem from="1521610998033" duration="1101000" />
+      <workItem from="1521616619597" duration="1287000" />
+      <workItem from="1521636210584" duration="1378000" />
+      <workItem from="1521684223741" duration="1595000" />
+      <workItem from="1521700377858" duration="1118000" />
+      <workItem from="1521702975708" duration="1257000" />
+      <workItem from="1521723990818" duration="1947000" />
+      <workItem from="1521767807596" duration="1200000" />
+      <workItem from="1521784543247" duration="1327000" />
+      <workItem from="1521788751992" duration="595000" />
+      <workItem from="1521796144345" duration="598000" />
+      <workItem from="1521809936322" duration="852000" />
+      <workItem from="1521856053927" duration="2400000" />
+      <workItem from="1521871599127" duration="1199000" />
+      <workItem from="1521896670058" duration="1600000" />
+      <workItem from="1521943705187" duration="1005000" />
+      <workItem from="1521947896515" duration="4503000" />
+      <workItem from="1521981150967" duration="2220000" />
+      <workItem from="1522032122199" duration="3839000" />
+      <workItem from="1522044693738" duration="4687000" />
+      <workItem from="1522117029642" duration="3660000" />
+      <workItem from="1522631667829" duration="1779000" />
+      <workItem from="1522660691034" duration="1029000" />
+      <workItem from="1522718920083" duration="1181000" />
+      <workItem from="1522735926740" duration="2401000" />
+      <workItem from="1522757746016" duration="2291000" />
+      <workItem from="1522805474577" duration="3222000" />
+      <workItem from="1522822361174" duration="1450000" />
+      <workItem from="1522893516186" duration="1816000" />
+      <workItem from="1522909823670" duration="2460000" />
+      <workItem from="1522979889956" duration="597000" />
+      <workItem from="1522981071336" duration="992000" />
+      <workItem from="1522993222597" duration="2444000" />
+      <workItem from="1523022282923" duration="1298000" />
+      <workItem from="1523065175372" duration="6107000" />
+      <workItem from="1523081096953" duration="16539000" />
+      <workItem from="1523107479435" duration="3664000" />
+      <workItem from="1523151632971" duration="454000" />
+      <workItem from="1523152775830" duration="10574000" />
+      <workItem from="1523193972419" duration="1660000" />
+      <workItem from="1523238501230" duration="2976000" />
+      <workItem from="1523259324441" duration="1379000" />
+      <workItem from="1523282269235" duration="919000" />
+      <workItem from="1523323216763" duration="8994000" />
+      <workItem from="1523343810618" duration="5051000" />
+      <workItem from="1523414332723" duration="4370000" />
+      <workItem from="1523427052271" duration="6400000" />
+      <workItem from="1523453417352" duration="1529000" />
+      <workItem from="1523497191704" duration="599000" />
+      <workItem from="1523500039134" duration="1289000" />
+      <workItem from="1523519703593" duration="1200000" />
+      <workItem from="1523539848479" duration="1811000" />
+      <workItem from="1523583941532" duration="1202000" />
+      <workItem from="1523603531924" duration="2350000" />
+      <workItem from="1523932569414" duration="2122000" />
+      <workItem from="1523943143695" duration="611000" />
+      <workItem from="1524368586682" duration="4349000" />
+      <workItem from="1524384480181" duration="1203000" />
+      <workItem from="1524404512325" duration="1200000" />
+      <workItem from="1524561992916" duration="243000" />
+      <workItem from="1524791078255" duration="1477000" />
+      <workItem from="1524837599569" duration="603000" />
+      <workItem from="1524879460674" duration="2402000" />
+      <workItem from="1524894741401" duration="1802000" />
+      <workItem from="1525329636508" duration="1001000" />
+      <workItem from="1525335742543" duration="6270000" />
+      <workItem from="1525342048920" duration="258000" />
+      <workItem from="1525402142513" duration="3787000" />
+      <workItem from="1525672435292" duration="10320000" />
+      <workItem from="1525748396144" duration="4492000" />
+      <workItem from="1525758871531" duration="6043000" />
+      <workItem from="1525787127379" duration="1206000" />
+      <workItem from="1525828047797" duration="6322000" />
+      <workItem from="1525846919189" duration="4347000" />
+      <workItem from="1525855323343" duration="6989000" />
+      <workItem from="1525917476211" duration="6381000" />
+      <workItem from="1525936291776" duration="1748000" />
+      <workItem from="1525947554750" duration="420000" />
+      <workItem from="1525959864671" duration="761000" />
+      <workItem from="1526004144572" duration="604000" />
+      <workItem from="1526021061084" duration="601000" />
+      <workItem from="1526098024627" duration="3497000" />
+      <workItem from="1526130089384" duration="1457000" />
+      <workItem from="1526173435787" duration="6257000" />
+      <workItem from="1526193004761" duration="1810000" />
+      <workItem from="1526270211904" duration="2362000" />
+      <workItem from="1526301659179" duration="1860000" />
+      <workItem from="1526351024277" duration="3500000" />
+      <workItem from="1526374976865" duration="601000" />
+      <workItem from="1526389223328" duration="1199000" />
+      <workItem from="1526441536624" duration="1198000" />
+      <workItem from="1526476543710" duration="1203000" />
+      <workItem from="1526526882048" duration="1197000" />
+      <workItem from="1526541968680" duration="2480000" />
+      <workItem from="1526565558027" duration="599000" />
+      <workItem from="1526612846496" duration="1087000" />
+      <workItem from="1526623692334" duration="594000" />
+      <workItem from="1526650739741" duration="1198000" />
+      <workItem from="1526701377918" duration="1201000" />
+      <workItem from="1526723686613" duration="1273000" />
+      <workItem from="1526737595023" duration="1198000" />
+      <workItem from="1526781797034" duration="2265000" />
+      <workItem from="1526798977351" duration="8054000" />
+      <workItem from="1527150368959" duration="2817000" />
+      <workItem from="1527169541248" duration="889000" />
+      <workItem from="1527219216029" duration="7935000" />
+      <workItem from="1527252556987" duration="599000" />
+      <workItem from="1527301351989" duration="1653000" />
+      <workItem from="1528008810139" duration="6751000" />
+      <workItem from="1528034276327" duration="1054000" />
+      <workItem from="1528082052981" duration="11786000" />
+      <workItem from="1528117607816" duration="741000" />
+      <workItem from="1528164048560" duration="5245000" />
+      <workItem from="1528206219535" duration="1135000" />
+      <workItem from="1528251896198" duration="1096000" />
+      <workItem from="1528263877255" duration="3605000" />
+      <workItem from="1528269627844" duration="6735000" />
+      <workItem from="1528292920155" duration="1685000" />
+      <workItem from="1528340511461" duration="1232000" />
+      <workItem from="1528365156737" duration="3358000" />
+      <workItem from="1528425263512" duration="3238000" />
+      <workItem from="1528436287128" duration="4945000" />
+      <workItem from="1528450525276" duration="829000" />
+      <workItem from="1528466395500" duration="1079000" />
+      <workItem from="1528507367209" duration="9218000" />
+      <workItem from="1528529518515" duration="9333000" />
+      <workItem from="1528596593990" duration="3255000" />
+      <workItem from="1528608396807" duration="8821000" />
+      <workItem from="1528681864702" duration="10827000" />
+      <workItem from="1528768242288" duration="4703000" />
+      <workItem from="1528783387149" duration="6592000" />
+      <workItem from="1528853152004" duration="8416000" />
+      <workItem from="1528874202109" duration="1338000" />
+      <workItem from="1528897283833" duration="599000" />
+      <workItem from="1528941063661" duration="2631000" />
+      <workItem from="1528955833855" duration="4156000" />
+      <workItem from="1528984722617" duration="966000" />
+      <workItem from="1529027378838" duration="1935000" />
+      <workItem from="1529198857416" duration="9008000" />
+      <workItem from="1529215775095" duration="6351000" />
+      <workItem from="1529242169982" duration="606000" />
+      <workItem from="1529283561244" duration="11080000" />
+      <workItem from="1529331959165" duration="406000" />
+      <workItem from="1530837486814" duration="5780000" />
+      <workItem from="1530853512407" duration="4689000" />
+      <workItem from="1530885083151" duration="2661000" />
+      <workItem from="1530930246116" duration="3212000" />
+      <workItem from="1530942084914" duration="5328000" />
+      <workItem from="1530959494448" duration="2003000" />
+      <workItem from="1530968705073" duration="2356000" />
+      <workItem from="1530979568264" duration="1458000" />
+      <workItem from="1531016565913" duration="3199000" />
+      <workItem from="1531034603031" duration="1549000" />
+      <workItem from="1531057069093" duration="1469000" />
+      <workItem from="1531066582039" duration="1198000" />
+      <workItem from="1531100043211" duration="1305000" />
+      <workItem from="1531111747880" duration="12868000" />
+      <workItem from="1531139734979" duration="3540000" />
+      <workItem from="1531188223476" duration="2727000" />
+      <workItem from="1531203475537" duration="5165000" />
+      <workItem from="1531230329787" duration="1792000" />
+      <workItem from="1531272319195" duration="1524000" />
+      <workItem from="1531278212531" duration="2297000" />
+      <workItem from="1531290260732" duration="6883000" />
+      <workItem from="1531312670564" duration="3534000" />
+      <workItem from="1531360151396" duration="6013000" />
+      <workItem from="1531371849711" duration="4870000" />
+      <workItem from="1531402694867" duration="1198000" />
+      <workItem from="1531446663305" duration="4636000" />
+      <workItem from="1531459448946" duration="3464000" />
+      <workItem from="1531497996861" duration="1692000" />
+      <workItem from="1531535196796" duration="2868000" />
+      <workItem from="1531543966168" duration="6967000" />
+      <workItem from="1531619340052" duration="3374000" />
+      <workItem from="1531633090972" duration="1835000" />
+      <workItem from="1531711344269" duration="1421000" />
+      <workItem from="1531716619520" duration="8925000" />
+      <workItem from="1531747183950" duration="599000" />
+      <workItem from="1531879881260" duration="2023000" />
+      <workItem from="1531890626622" duration="6737000" />
+      <workItem from="1531920111646" duration="598000" />
+      <workItem from="1532052411855" duration="1920000" />
+      <workItem from="1532065668239" duration="3665000" />
+      <workItem from="1532240683212" duration="1278000" />
+      <workItem from="1532266557355" duration="1011000" />
+      <workItem from="1532311756359" duration="938000" />
+      <workItem from="1532336050420" duration="1290000" />
+      <workItem from="1532352510932" duration="1385000" />
+      <workItem from="1532359668215" duration="3989000" />
+      <workItem from="1532396948403" duration="8090000" />
+      <workItem from="1532438445342" duration="599000" />
+      <workItem from="1532445414315" duration="1213000" />
+      <workItem from="1532569373769" duration="4678000" />
+      <workItem from="1532585829427" duration="772000" />
+      <workItem from="1532586996422" duration="3500000" />
+      <workItem from="1532591647217" duration="10718000" />
+      <workItem from="1532618901571" duration="2421000" />
+      <workItem from="1532830007014" duration="6229000" />
+      <workItem from="1532841072056" duration="10186000" />
+      <workItem from="1532869784489" duration="598000" />
+      <workItem from="1532878739991" duration="1199000" />
+      <workItem from="1532915968237" duration="1200000" />
+      <workItem from="1532937511358" duration="607000" />
+      <workItem from="1532958367788" duration="594000" />
+      <workItem from="1533051764707" duration="191000" />
+      <workItem from="1533053954627" duration="100000" />
+      <workItem from="1533089441928" duration="1815000" />
+      <workItem from="1533105043335" duration="3133000" />
+      <workItem from="1533263696384" duration="1214000" />
+      <workItem from="1533278465034" duration="2276000" />
+      <workItem from="1533287902209" duration="516000" />
+      <workItem from="1533435102448" duration="3447000" />
+      <workItem from="1533446730947" duration="2236000" />
+      <workItem from="1533467526354" duration="2413000" />
+      <workItem from="1533476666696" duration="1419000" />
+      <workItem from="1533606310112" duration="2583000" />
+      <workItem from="1533618222695" duration="1447000" />
+      <workItem from="1533629817541" duration="1485000" />
+      <workItem from="1533649621669" duration="1200000" />
+      <workItem from="1534212215264" duration="924000" />
+      <workItem from="1534214699866" duration="1362000" />
+      <workItem from="1534220840628" duration="12828000" />
+      <workItem from="1534340021417" duration="1325000" />
+      <workItem from="1534386166716" duration="8223000" />
+      <workItem from="1534397719185" duration="5930000" />
+      <workItem from="1534407621631" duration="1225000" />
+      <workItem from="1534560560654" duration="4366000" />
+      <workItem from="1534569306401" duration="7808000" />
+      <workItem from="1534599457022" duration="349000" />
+      <workItem from="1534600127168" duration="596000" />
+      <workItem from="1534733266355" duration="2691000" />
+      <workItem from="1534745996618" duration="827000" />
+      <workItem from="1534902459842" duration="2588000" />
+      <workItem from="1534912484664" duration="4277000" />
+      <workItem from="1534945713862" duration="1250000" />
+      <workItem from="1534989430610" duration="1537000" />
+      <workItem from="1534998443793" duration="5535000" />
+      <workItem from="1535445851552" duration="599000" />
+      <workItem from="1536025499455" duration="988000" />
+      <workItem from="1536039487984" duration="967000" />
+      <workItem from="1536041656792" duration="2543000" />
+      <workItem from="1536069696846" duration="1457000" />
+      <workItem from="1536194595168" duration="2440000" />
+      <workItem from="1536282269937" duration="1201000" />
+      <workItem from="1536542959076" duration="2998000" />
+      <workItem from="1536588172105" duration="19000" />
+      <workItem from="1536887173943" duration="4231000" />
+      <workItem from="1537065779721" duration="1204000" />
+      <workItem from="1537079474043" duration="2004000" />
+      <workItem from="1537161114192" duration="3848000" />
+      <workItem from="1537187431569" duration="6175000" />
+      <workItem from="1537236344901" duration="7827000" />
+      <workItem from="1537249761604" duration="3728000" />
+      <workItem from="1537321473935" duration="1753000" />
+      <workItem from="1537326511224" duration="2686000" />
+      <workItem from="1537341151306" duration="1647000" />
+      <workItem from="1537408270167" duration="2702000" />
+      <workItem from="1537494834755" duration="4030000" />
+      <workItem from="1537502605531" duration="879000" />
+      <workItem from="1537520247322" duration="2341000" />
+      <workItem from="1537539553093" duration="836000" />
+      <workItem from="1537583900273" duration="4585000" />
+      <workItem from="1537619288229" duration="3247000" />
+      <workItem from="1537755125616" duration="2426000" />
+      <workItem from="1537777282187" duration="1314000" />
+      <workItem from="1537790664394" duration="6761000" />
+      <workItem from="1537842977453" duration="7501000" />
+      <workItem from="1537854838412" duration="6467000" />
+      <workItem from="1537884114881" duration="622000" />
+      <workItem from="1537926603441" duration="639000" />
+      <workItem from="1537928043649" duration="1906000" />
+      <workItem from="1537938961495" duration="598000" />
+      <workItem from="1537945958516" duration="1920000" />
+      <workItem from="1538013469885" duration="3024000" />
+      <workItem from="1538029163928" duration="5896000" />
+      <workItem from="1538051553261" duration="597000" />
+      <workItem from="1538098787756" duration="1203000" />
+      <workItem from="1538104711552" duration="596000" />
+      <workItem from="1538140857668" duration="1263000" />
+      <workItem from="1538184951594" duration="3007000" />
+      <workItem from="1538270415999" duration="1362000" />
+      <workItem from="1538313226049" duration="1197000" />
+      <workItem from="1538356441485" duration="3294000" />
+      <workItem from="1538372221253" duration="5604000" />
+      <workItem from="1538462331289" duration="1331000" />
+      <workItem from="1538484501366" duration="2715000" />
+      <workItem from="1538621224461" duration="606000" />
+      <workItem from="1538793274353" duration="3922000" />
+      <workItem from="1538900861250" duration="2133000" />
+      <workItem from="1538962345477" duration="2888000" />
+      <workItem from="1538966350711" duration="3528000" />
+      <workItem from="1538980675227" duration="907000" />
+      <workItem from="1538987004708" duration="2950000" />
+      <workItem from="1539050039372" duration="599000" />
+      <workItem from="1539050864628" duration="6316000" />
+      <workItem from="1539065831860" duration="3058000" />
+      <workItem from="1539073369214" duration="921000" />
+      <workItem from="1539157095530" duration="4013000" />
+      <workItem from="1539570483061" duration="1547000" />
+      <workItem from="1539585992648" duration="1203000" />
+      <workItem from="1539605698294" duration="598000" />
+      <workItem from="1539654772819" duration="597000" />
+      <workItem from="1539676686362" duration="599000" />
+      <workItem from="1539691602386" duration="594000" />
+      <workItem from="1539738889645" duration="598000" />
+      <workItem from="1539753717151" duration="2250000" />
+      <workItem from="1539825116124" duration="3161000" />
+      <workItem from="1539844627676" duration="1875000" />
+      <workItem from="1539870029348" duration="1802000" />
+      <workItem from="1539912072718" duration="1801000" />
+      <workItem from="1539938883736" duration="623000" />
+      <workItem from="1539947153398" duration="598000" />
+      <workItem from="1539958247434" duration="597000" />
+      <workItem from="1539998551574" duration="2382000" />
+      <workItem from="1540343083223" duration="1437000" />
+      <workItem from="1540356095262" duration="571000" />
+      <workItem from="1540527328428" duration="805000" />
+      <workItem from="1540778440024" duration="1255000" />
+      <workItem from="1541578424187" duration="3173000" />
+      <workItem from="1541650452936" duration="599000" />
+      <workItem from="1541773151757" duration="618000" />
+      <workItem from="1541830713229" duration="897000" />
+      <workItem from="1542855293420" duration="601000" />
+      <workItem from="1542945314042" duration="2121000" />
+      <workItem from="1543237693710" duration="1199000" />
+      <workItem from="1545015644975" duration="850000" />
+      <workItem from="1545027852109" duration="3530000" />
+      <workItem from="1545097985383" duration="733000" />
+      <workItem from="1545102663000" duration="3700000" />
+      <workItem from="1545142773159" duration="1193000" />
+      <workItem from="1545182713865" duration="1814000" />
+      <workItem from="1545401178682" duration="736000" />
+      <workItem from="1545571008227" duration="1299000" />
+      <workItem from="1545636536756" duration="2963000" />
+      <workItem from="1546135924707" duration="7191000" />
+      <workItem from="1546175230952" duration="1780000" />
+      <workItem from="1546391952377" duration="5370000" />
+      <workItem from="1546436459019" duration="1724000" />
+      <workItem from="1546654208537" duration="4164000" />
+      <workItem from="1548557830598" duration="796000" />
+      <workItem from="1548640405107" duration="1186000" />
+      <workItem from="1548660525679" duration="594000" />
+      <workItem from="1548724660496" duration="1191000" />
+      <workItem from="1548737482012" duration="595000" />
+      <workItem from="1548744882601" duration="599000" />
+      <workItem from="1548758727839" duration="2116000" />
+      <workItem from="1548935683814" duration="1460000" />
+      <workItem from="1551255230582" duration="1216000" />
+      <workItem from="1551579840114" duration="3234000" />
+      <workItem from="1551590239278" duration="795000" />
+      <workItem from="1551661792305" duration="2398000" />
+      <workItem from="1551677384979" duration="1240000" />
+      <workItem from="1551840969228" duration="7969000" />
+      <workItem from="1552460406241" duration="705000" />
+      <workItem from="1552467669754" duration="1743000" />
+      <workItem from="1552531741479" duration="1809000" />
+      <workItem from="1553224826084" duration="1301000" />
+      <workItem from="1553307904589" duration="2307000" />
+      <workItem from="1553321844570" duration="6892000" />
+      <workItem from="1554347330476" duration="959000" />
+      <workItem from="1554449548676" duration="689000" />
+      <workItem from="1554600422367" duration="1203000" />
+      <workItem from="1554618866227" duration="595000" />
+      <workItem from="1554622986639" duration="2150000" />
+      <workItem from="1554627197008" duration="271000" />
+      <workItem from="1554627515137" duration="363000" />
+      <workItem from="1554627918013" duration="584000" />
+      <workItem from="1554630569774" duration="738000" />
+      <workItem from="1554644822897" duration="737000" />
+      <workItem from="1554686916290" duration="4299000" />
+      <workItem from="1554699862496" duration="4524000" />
+      <workItem from="1554715908142" duration="346000" />
+      <workItem from="1554730066461" duration="683000" />
+      <workItem from="1554773223521" duration="1209000" />
+      <workItem from="1554777787552" duration="1599000" />
+      <workItem from="1554785995318" duration="8445000" />
+      <workItem from="1554816065709" duration="2282000" />
+      <workItem from="1554945559351" duration="9107000" />
+      <workItem from="1554962884284" duration="5323000" />
+      <workItem from="1555730918256" duration="1284000" />
+      <workItem from="1555736279885" duration="1796000" />
+      <workItem from="1555745970666" duration="595000" />
+      <workItem from="1555769130607" duration="599000" />
+      <workItem from="1555811565678" duration="1104000" />
+      <workItem from="1555830542122" duration="2189000" />
+      <workItem from="1555854355916" duration="667000" />
+      <workItem from="1555900839612" duration="1005000" />
+      <workItem from="1555913081885" duration="1448000" />
+      <workItem from="1555985462292" duration="599000" />
+      <workItem from="1555996304504" duration="607000" />
+      <workItem from="1556242676698" duration="599000" />
+      <workItem from="1556334310432" duration="1546000" />
+      <workItem from="1556349913060" duration="2516000" />
+      <workItem from="1556355641528" duration="1396000" />
+      <workItem from="1556373090378" duration="895000" />
+      <workItem from="1556416729049" duration="1821000" />
+      <workItem from="1556430701142" duration="1588000" />
+      <workItem from="1556460361429" duration="1491000" />
+      <workItem from="1556500932196" duration="901000" />
+      <workItem from="1556519159652" duration="1815000" />
+      <workItem from="1556544862627" duration="1311000" />
+      <workItem from="1556591653656" duration="3611000" />
+      <workItem from="1556600632018" duration="966000" />
+      <workItem from="1556607232626" duration="1268000" />
+      <workItem from="1556632749869" duration="617000" />
+      <workItem from="1556674135619" duration="2749000" />
+      <workItem from="1556691443063" duration="2987000" />
+      <workItem from="1557199884376" duration="2693000" />
+      <workItem from="1557208506774" duration="8833000" />
+      <workItem from="1557971836038" duration="776000" />
+      <workItem from="1557972666728" duration="573000" />
+      <workItem from="1557985757857" duration="866000" />
+      <workItem from="1558015310378" duration="897000" />
+      <workItem from="1558408041209" duration="2228000" />
+      <workItem from="1558415808558" duration="688000" />
+      <workItem from="1558597392686" duration="1842000" />
+      <workItem from="1558768090553" duration="1234000" />
+      <workItem from="1558791567501" duration="874000" />
+      <workItem from="1559096402800" duration="2295000" />
+      <workItem from="1559116402370" duration="599000" />
+      <workItem from="1560131256897" duration="5360000" />
+      <workItem from="1560150756575" duration="777000" />
+      <workItem from="1561009853470" duration="11340000" />
+      <workItem from="1561034036361" duration="2177000" />
+      <workItem from="1561080247480" duration="2422000" />
+      <workItem from="1561084365334" duration="3032000" />
+      <workItem from="1561096485075" duration="7222000" />
+      <workItem from="1561179284085" duration="4498000" />
+      <workItem from="1561253609374" duration="3567000" />
+      <workItem from="1561275730098" duration="3364000" />
+      <workItem from="1561426082409" duration="1801000" />
+      <workItem from="1561512245531" duration="2398000" />
+      <workItem from="1561872466504" duration="602000" />
+      <workItem from="1561967184114" duration="944000" />
+      <workItem from="1562037868185" duration="1199000" />
+      <workItem from="1562054595715" duration="3390000" />
+      <workItem from="1562118888072" duration="3803000" />
+      <workItem from="1562141568291" duration="2363000" />
+      <workItem from="1562289164033" duration="1215000" />
+      <workItem from="1562331682716" duration="592000" />
+      <workItem from="1562381711125" duration="589000" />
+      <workItem from="1562551016680" duration="677000" />
+      <workItem from="1562562158263" duration="1105000" />
+      <workItem from="1562636804809" duration="606000" />
+      <workItem from="1562649497973" duration="591000" />
+      <workItem from="1562678340897" duration="588000" />
+      <workItem from="1562722058072" duration="1252000" />
+      <workItem from="1562744417601" duration="1878000" />
+      <workItem from="1562807917005" duration="637000" />
+      <workItem from="1562826140190" duration="1806000" />
+      <workItem from="1562851777951" duration="907000" />
+      <workItem from="1562894573695" duration="3594000" />
+      <workItem from="1562937531511" duration="1192000" />
+      <workItem from="1563068766514" duration="713000" />
+      <workItem from="1563074524922" duration="1186000" />
+      <workItem from="1563154724952" duration="588000" />
+      <workItem from="1563196675773" duration="595000" />
+      <workItem from="1563244439262" duration="594000" />
+      <workItem from="1563326275388" duration="588000" />
+      <workItem from="1563412292527" duration="9155000" />
+      <workItem from="1563504474284" duration="5183000" />
+      <workItem from="1563675898804" duration="1722000" />
+      <workItem from="1563678403706" duration="589000" />
+      <workItem from="1563847911451" duration="1872000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1540968000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16362661" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" weight="0.3299356" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32922733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23178808" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39977604" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289183" />
+      <window_info anchor="bottom" id="Tool Output" order="7" weight="0.3289183" />
+      <window_info anchor="bottom" id="Event Log" order="8" weight="0.3289183" />
+      <window_info anchor="bottom" id="Application Servers" order="9" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="10" weight="0.3289183" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Changes" order="13" />
+      <window_info anchor="bottom" id="Problems" order="14" weight="0.3289183" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.3289183" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3289183" />
+      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.152897" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Structure" order="10" visible="true" weight="0.06866953" />
+      <window_info anchor="right" id="Maven" order="11" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="F:/jfinal/jfinalseries/jfinal-3.3_demo_for_maven_310/jfinal_demo_for_maven_iplatform/src/main/webapp/market/item/select.js" />
+        <option value="F:/jfinal/jfinalseries/jfinal-3.3_demo_for_maven_310/jfinal_demo_for_maven_iplatform/src/main/webapp/market/item/select.js.map" />
+        <option value="F:/jfinal/jfinalseries/jfinal-3.3_demo_for_maven/jfinal_demo_for_maven_itransaction/src/main/webapp/boot/marketCurrency/hello.js" />
+        <option value="F:/jfinal/jfinalseries/jfinal-3.3_demo_for_maven_310/jfinal_demo_for_maven_iplatform/src/main/webapp/market/item/itempara.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/js/fxtest/UpdateController.java</url>
+          <line>351</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/js/code/db/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
+          <folding>
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/code/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CmstagEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/validator/Length.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TableAnno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TableFieldGetBy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TableIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TimeField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/PartField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/AutoIncrement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/PrimaryKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TableFieldType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/common/anno/TableField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/Cmspic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CmspicEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/TopicEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="142" selection-start-line="142" selection-end-line="144" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/code/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5350">
+          <caret line="248" column="41" selection-start-line="248" selection-start-column="41" selection-end-line="248" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/Cmstag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/bean/relations/BeanRelationUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="88" column="41" lean-forward="true" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/fxtest/SelectComplexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="396" column="47" lean-forward="true" selection-start-line="396" selection-start-column="47" selection-end-line="396" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/controller_all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/view_part_s_enjoy.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/daoimpl.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="23" column="86" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/daoimplex.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10250">
+          <caret line="410" column="127" selection-start-line="410" selection-start-column="8" selection-end-line="410" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/daoex.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="45" column="127" selection-start-line="45" selection-start-column="127" selection-end-line="45" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/view_s_enjoy.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/view_s_fields_enjoy.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/controllerex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="156" column="65" selection-start-line="156" selection-start-column="65" selection-end-line="156" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/code/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPosEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2375">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/dbauto/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/bean.vm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/beanex.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyDex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyInfoEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1625">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyMutable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDetailEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="70" column="23" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyDexEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/orm/CurrencyPosScrawLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPosScrawLogEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyStatusEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyPriceEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1750">
+          <caret line="73" column="28" selection-start-line="67" selection-start-column="3" selection-end-line="73" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/js/cms/ormex/CurrencyMutableEx.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MathIntestJavaFx/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MathIntestJavaFx/src/main/java/com/js/math/IntestApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>DbAutoJavaFx</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-5.1.7-bin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

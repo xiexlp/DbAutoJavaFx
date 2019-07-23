@@ -1,0 +1,75 @@
+//server
+public int deleteBy${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return ${tableWrapper.instancename}Dao.deleteBy${codeConcat.fieldConcat}(${tableWrapper.instancename});
+}
+
+//--
+
+
+
+//server ex
+public int deleteBy${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return ${tableWrapper.instancename}DaoEx.deleteBy${codeConcat.fieldConcat}(${tableWrapper.instancename});
+}
+
+//--
+
+//dao
+public int deleteBy${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename});
+
+//--
+
+//daoimpl
+public int deleteBy${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+String sql = "${sqlAndParam.delete_field_sql}";
+try {
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${sqlAndParam.delete_field_param}
+
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.closeJshopConnection();
+//DbHotel.closeConnectionByName(dbname);
+}
+return result;
+}
+
+
+//server no bean
+public int deleteBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType}){
+return ${tableWrapper.instancename}Dao.deleteBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithComma});
+}
+
+//dao no bean
+public int deleteBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType});
+
+
+//daoimpl no bean
+public int deleteBy${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType}){
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+String sql = "${sqlAndParam.delete_by_field_sql}";
+try {
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${sqlAndParam.delete_by_field_param_no_bean}
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+}
+return result;
+}

@@ -1,0 +1,12 @@
+//controller part page方法，放在controller里面
+ public void ${tableWrapper.instancename}PartPage(){
+        int pageNo = getIntPara("pageNo",1);
+        PageList<${tableWrapper.beanname}> ${tableWrapper.instancename}list = ${tableWrapper.beanname}Serv.n().findByPage(pageNo,21);
+            setAttr("${tableWrapper.instancename}list", ${tableWrapper.instancename}list);
+            System.out.println("list size:"+${tableWrapper.instancename}list.size());
+            String actionUrl = "${tableWrapper.instancename}PartPage?1=1";
+            setPageInfo(${tableWrapper.instancename}list, actionUrl);
+            //render("${tableWrapper.instancename}PartPage.html");
+            }
+
+

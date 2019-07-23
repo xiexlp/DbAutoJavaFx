@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>${tableWrapper.instancename}修改</title>
+    <link rel="stylesheet" href="/jss/bootstrap-3.3.5/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/jss/css/main.css"/>
+    <script src="/jss/js/vendor/jquery.js"></script>
+    <link rel="stylesheet" href="/jss/bootstrap-3.3.5/dist/js/bootstrap.js"/>
+</head>
+<body>
+
+<!-- editform 用于编辑 -->
+<form action="/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}edit" id="add${tableWrapper.beanname}Form" method="post" name="edit${tableWrapper.beanname}Form">
+    <div class="form-horizontal" style="padding: 10px 0 0 10px;">
+        #foreach($f in $list)
+            <div class="form-group">
+                <label for="${f.fieldname}" class="control-label col-lg-3">${f.fieldname}</label>
+                <div class="col-lg-6">
+                    <input type="text" id="${f.fieldname}" name="${f.fieldname}" class="form-control" value="${${tableWrapper.instancename}.${f.fieldname}}">
+                </div>
+                <!--错误提示-->
+                <label class="label label-danger">$(${f.fieldname}Info!)</label>
+            </div>
+        #end
+        <!--提交-->
+        <div class="form-group">
+            <label for="" class="control-label col-lg-3"></label>
+            <div class="col-lg-6">
+                <button type="submit" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/jquery.validate.js"></script>
+<!--<script src="/jslib/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>-->
+<script src="/jss/jquery-validator/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script src="/${tableWrapper.relativePath}/jslib/validator-orm/${tableWrapper.instancename}AddEditValidator.js"></script>
+
+</body>
+</html>
+
+
+

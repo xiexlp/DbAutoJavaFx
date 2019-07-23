@@ -1,0 +1,60 @@
+$.validator.setDefaults({
+submitHandler : function(form) {
+// alert("提交事件!");
+// $("#blogactionaddForm").submit();
+form.submit();
+}
+});
+
+$().ready(function() {
+$("#add${tableWrapper.beanname}Form").validate({
+rules : {
+    #foreach($f in $list)
+        #if($f.iskey!="PRI")
+            ${f.fieldname} : {
+            required : true,
+            #if($f.javatype=="int"||$f.javatype=="long")
+            number : true,
+            #end
+        },
+        #end
+    #end
+},
+messages : {
+    #foreach($f in $list)
+        #if($f.iskey!="PRI")
+                ${f.fieldname} : {
+                required : "${f.fieldname}字段必须填写!",
+                #if($f.javatype=="int"||$f.javatype=="long")
+                number : "请输入合法的数字",
+                #end
+            },
+        #end
+    #end
+}
+});
+
+$("#edit${tableWrapper.beanname}Form").validate({
+rules : {
+#foreach($f in $list)
+    ${f.fieldname} : {
+        required : true,
+        #if($f.javatype=="int"||$f.javatype=="long")
+        number : true,
+        #end
+    },
+#end
+},
+messages : {
+#foreach($f in $list)
+    ${f.fieldname} : {
+    required : "${f.fieldname} 字段必须填写!",
+    #if($f.javatype=="int"||$f.javatype=="long")
+    number : "请输入合法的数字",
+    #end
+},
+#end
+}
+});
+
+});

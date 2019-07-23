@@ -1,0 +1,6 @@
+hello,
+#set($temp="")
+#foreach($name in $names.split('_'))
+    #set($temp="$temp$name.substring(0,1).toUpperCase()"+$name.substring(1,$name.length()))
+#end
+$temp

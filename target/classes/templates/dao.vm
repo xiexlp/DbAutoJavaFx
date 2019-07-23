@@ -1,0 +1,17 @@
+package ${tableWrapper.packagename}.dao;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+import ${tableWrapper.packagename}.daoex.${tableWrapper.beanname}DaoEx;
+
+public interface ${tableWrapper.beanname}Dao extends ${tableWrapper.beanname}DaoEx{
+
+
+
+}

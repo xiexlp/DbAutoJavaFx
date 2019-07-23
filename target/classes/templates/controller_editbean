@@ -1,0 +1,32 @@
+public void ${tableWrapper.instancename}edit(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+            //System.out.println("manus size:"+users.size());
+            //List<Group> groups = GroupServ.n().findAll();
+                System.out.println("group size:"+groups.size());
+                //int userID= getIntPara("userID", 1);
+                int ${tableWrapper.keynameHump} = getIntPara("${tableWrapper.keynameHump}",1);
+                if(${tableWrapper.keynameHump}==0) {
+                System.out.println("出错");
+                return;
+                }
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = ${tableWrapper.beanname}Serv.n().get(${tableWrapper.keyname});
+                //setAttr("groups",groups);
+                setAttr("${tableWrapper.instancename}",${tableWrapper.instancename});
+
+                }else if(method.equalsIgnoreCase("POST")){
+                ${tableWrapper.beanname} ${tableWrapper.instancename} = get${tableWrapper.beanname}FromRequestEdit();
+                if(${tableWrapper.instancename}==null) {
+                System.out.println("id不存在");
+                return;
+                }
+                ${tableWrapper.beanname}Serv ${tableWrapper.instancename}Serv = ${tableWrapper.beanname}Serv.n();
+                int r=0;
+                r=${tableWrapper.instancename}Serv.updateUsernamePasswordUpdateTimeGroupIDGroupNameUserTypeCreditMobilePhoneEmailMobileSntEmailSntStatusBriefSaltAvatar(user);
+                if(r>0) redirect("/admin/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                else {
+                System.out.println("出错");
+                }
+                }
+                }

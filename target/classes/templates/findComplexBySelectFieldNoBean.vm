@@ -1,0 +1,78 @@
+//放在server里面
+#if(${returnType}=="bean")
+public List<${tableWrapper.beanname}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}){
+#else
+public List<${returnType}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}){
+#end
+return ${tableWrapper.instancename}Dao.find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithComma});
+}
+
+//--
+
+//放在server ex里面,以上两个只放一个就可以，不用都放
+#if(${returnType}=="bean")
+public List<${tableWrapper.beanname}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}){
+#else
+public List<${returnType}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}){
+#end
+return ${tableWrapper.instancename}DaoEx.find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithComma});
+}
+
+//--
+
+//放在dao里面
+#if(${returnType}=="bean")
+public List<${tableWrapper.beanname}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType});
+#else
+public List<${returnType}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType});
+#end
+
+//--
+
+//放在daoimpl里面
+#if(${returnType}=="bean")
+public List<${tableWrapper.beanname}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}) {
+#else
+public List<${returnType}> find${codeConcat.searchFieldConcat}_OrderBy${orderByFields}_By${fieldConditionConcat}(${codeConcat.fieldConcatWithType}) {
+#end
+PreparedStatement p = null;
+ResultSet r = null;
+Connection conn=null;
+//PageList<${tableWrapper.beanname}> list = new PageList(pageNo,total);
+#if(${returnType}=="bean")
+List<${tableWrapper.beanname}> list = new ArrayList();
+    ${tableWrapper.beanname} ${tableWrapper.instancename} = null;
+#else
+List<${returnType}> list = new ArrayList();
+    ${returnType} result = null;
+#end
+String sql = "${select_complex_sql}";
+try {
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${select_complex_sql_param}
+r = p.executeQuery();
+while (r.next()) {
+#if(${returnType}=="bean")
+    ${tableWrapper.instancename} = new ${tableWrapper.beanname}();
+    ${select_complex_set_param}
+list.add(${tableWrapper.instancename});
+#elseif(${returnType}=="Integer"||${returnType}=="Long")
+result = new ${returnType}(0);
+    ${select_complex_set_param}
+list.add(result);
+#else
+result = new ${returnType}();
+    ${select_complex_set_param}
+list.add(result);
+#end
+}
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(r, p);
+DbUtils.closeConn(conn);
+}
+return list;
+}

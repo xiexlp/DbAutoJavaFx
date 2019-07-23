@@ -1,0 +1,23 @@
+public void ${tableWrapper.instancename}new(){
+        String method = getRequest().getMethod();
+        if(method.equalsIgnoreCase("GET")) {
+        //List<Group> groups = GroupServ.n().findAll();
+          //  setAttr("groups",groups);
+            //List<Manufacturer> manus = ManufacturerServ.n().findAll();
+                //System.out.println("manus size:"+manus.size());
+                //setAttr("manus",manus);
+                render("${tableWrapper.instancename}new.html");
+                }else if(method.equalsIgnoreCase("POST")){
+                User user = getUserFromRequest();
+                ${tableWrapper.beanname} ${tableWrapper.instancename}= get${tableWrapper.beanname}FromRequest();
+                //int r = UserServ.n().saveAutoId(user);
+                int r=${tableWrapper.beanname}Serv.n().saveAutoId(${tableWrapper.instancename});
+                if(r>0){
+                redirect("/${tableWrapper.relativePath}/${tableWrapper.instancename}/${tableWrapper.instancename}s");
+                }else {
+                System.out.println("新增失败");
+                }
+                }
+                }
+
+

@@ -1,0 +1,92 @@
+//server
+public int update${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return ${tableWrapper.instancename}Dao.update${codeConcat.fieldConcat}(${tableWrapper.instancename});
+}
+
+//--
+
+//server ex
+public int update${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return ${tableWrapper.instancename}DaoEx.update${codeConcat.fieldConcat}(${tableWrapper.instancename});
+}
+
+//--
+
+
+//dao
+public int update${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename});
+
+
+//--
+
+//daoimpl
+public int update${codeConcat.fieldConcat}(${tableWrapper.beanname} ${tableWrapper.instancename}){
+    PreparedStatement p = null;
+    int result=-1;
+    Connection conn=null;
+    String sql = "${sqlAndParam.update_field_sql}";
+    try {
+    // p = DbHotel.getJshopConnection().prepareStatement(sql);
+    //p = DbHotel.getConnectionByName(dbname).prepareStatement(sql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+    ${sqlAndParam.update_field_param}
+    //p.setString(1,spec.getSpecName());
+    //p.setObject(2,spec.getSpecTypeID());
+    //p.setString(3,spec.getTypeName());
+    //p.setString(4,spec.getBrief());
+    //p.setInt(5,spec.getSpecID());
+
+    result=p.executeUpdate();
+    } catch (Exception e) {
+    e.printStackTrace();
+    throw new DatabaseException(e);
+    } finally {
+    DbUtils.close(p);
+    DbUtils.closeConn(conn);
+    //DbHotel.closeJshopConnection();
+    //DbHotel.closeConnectionByName(dbname);
+    }
+    return result;
+}
+
+
+//server no bean
+public int update${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType},${codeConcat.keyConcatWithType}){
+return ${tableWrapper.instancename}Dao.update${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithComma},${codeConcat.keyConcatWithComma});
+}
+
+//dao no bean
+public int update${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType},${codeConcat.keyConcatWithType});
+
+
+//daoimpl no bean
+public int update${codeConcat.fieldConcat}(${codeConcat.fieldConcatWithType},${codeConcat.keyConcatWithType}){
+PreparedStatement p = null;
+int result=-1;
+Connection conn=null;
+String sql = "${sqlAndParam.update_field_sql}";
+try {
+// p = DbHotel.getJshopConnection().prepareStatement(sql);
+//p = DbHotel.getConnectionByName(dbname).prepareStatement(sql);
+conn =HikariDb.getConnection();
+p=conn.prepareStatement(sql);
+${sqlAndParam.update_field_param_no_bean}
+//p.setString(1,spec.getSpecName());
+//p.setObject(2,spec.getSpecTypeID());
+//p.setString(3,spec.getTypeName());
+//p.setString(4,spec.getBrief());
+//p.setInt(5,spec.getSpecID());
+
+result=p.executeUpdate();
+} catch (Exception e) {
+e.printStackTrace();
+throw new DatabaseException(e);
+} finally {
+DbUtils.close(p);
+DbUtils.closeConn(conn);
+//DbHotel.closeJshopConnection();
+//DbHotel.closeConnectionByName(dbname);
+}
+return result;
+}

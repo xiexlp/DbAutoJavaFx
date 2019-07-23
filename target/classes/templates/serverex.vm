@@ -1,0 +1,100 @@
+package ${tableWrapper.packagename}.servex;
+
+/**
+* last update time:$tableWrapper.nows
+* last update user:$tableWrapper.author
+*/
+
+import ${tableWrapper.packagename}.orm.${tableWrapper.beanname};
+import ${tableWrapper.packagename}.daoimplex.${tableWrapper.beanname}DaoimplEx;
+import ${tableWrapper.packagename}.daoex.${tableWrapper.beanname}DaoEx;
+
+import ${tableWrapper.packagename}.daoimpl.${tableWrapper.beanname}Daoimpl;
+import ${tableWrapper.packagename}.dao.${tableWrapper.beanname}Dao;
+import java.util.List;
+import ${tableWrapper.commonPackage}.util.PageList;
+
+public class ${tableWrapper.beanname}ServEx{
+
+private ${tableWrapper.beanname}DaoEx ${tableWrapper.instancename}DaoEx;
+
+public ${tableWrapper.beanname}ServEx(){
+this.${tableWrapper.instancename}DaoEx =new ${tableWrapper.beanname}DaoimplEx();
+}
+
+public static ${tableWrapper.beanname}ServEx n(){
+return new ${tableWrapper.beanname}ServEx();
+}
+
+public int save(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return this.${tableWrapper.instancename}DaoEx.save(${tableWrapper.instancename});
+}
+#if($tableWrapper.noKeySize>=1)
+public int saveAutoId(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return this.${tableWrapper.instancename}DaoEx.saveAutoId(${tableWrapper.instancename});
+}
+
+public int saveAutoReturnId(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return this.${tableWrapper.instancename}DaoEx.saveAutoReturnId(${tableWrapper.instancename});
+}
+
+#end
+
+public ${tableWrapper.beanname} get($sqlParam.key_arguments){
+return this.${tableWrapper.instancename}DaoEx.get($sqlParam.key_argumentNoType);
+}
+
+public int delete($sqlParam.key_arguments){
+return this.${tableWrapper.instancename}DaoEx.delete($sqlParam.key_argumentNoType);
+}
+
+public int updateSet(String set,String where){
+return this.${tableWrapper.instancename}DaoEx.updateSet(set,where);
+}
+
+public int deleteWhere(String where){
+return this.${tableWrapper.instancename}DaoEx.deleteWhere(where);
+}
+
+
+public int update(${tableWrapper.beanname} ${tableWrapper.instancename}){
+return this.${tableWrapper.instancename}DaoEx.update(${tableWrapper.instancename});
+}
+
+public List<${tableWrapper.beanname}> find(String hql){
+return this.${tableWrapper.instancename}DaoEx.find(hql);
+}
+
+public List<${tableWrapper.beanname}> findNames(List<String> names,String wherehql){
+    return this.${tableWrapper.instancename}DaoEx.findNames(names,wherehql);
+    }
+
+
+    public PageList<${tableWrapper.beanname}> findNamesPage(List<String> names,String wherehql,int pageNo,int total){
+        return this.${tableWrapper.instancename}DaoEx.findNamesPage(names,wherehql,pageNo,total);
+        }
+
+
+
+public List<${tableWrapper.beanname}> findAll(){
+return this.${tableWrapper.instancename}DaoEx.findAll();
+}
+
+public PageList<${tableWrapper.beanname}> findByPage(int pageNo,int total){
+return this.${tableWrapper.instancename}DaoEx.findByPage(pageNo,total);
+}
+
+public PageList<${tableWrapper.beanname}> findByPageOrder(int pageNo,int total,String fieldname,boolean asc){
+return this.${tableWrapper.instancename}DaoEx.findByPageOrder(pageNo,total,fieldname,asc);
+}
+        public List<${tableWrapper.beanname}> findNameArray(String[] names,String wherehql){
+        return this.${tableWrapper.instancename}DaoEx.findNameArray(names,wherehql);
+        }
+
+        public PageList<${tableWrapper.beanname}> findNameArrayPage(String[] names,String wherehql,int pageNo,int total){
+        return this.${tableWrapper.instancename}DaoEx.findNameArrayPage(names,wherehql,pageNo,total);
+        }
+
+
+
+}
